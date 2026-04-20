@@ -1,0 +1,114 @@
+Query: What is NDCG and why is it a better metric than MRR for evaluating within-topic ranking quality?
+Retrieved 9 passages
+
+--- Passage 1 (score: 4.2456) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The core FTS5 retrieval achieves MRR 0.90 (first relevant result at rank 1 for 90% of queries). Layers
+3–4 maintain but do not improve MRR—the Graph and Pattern layers provide structural enrichment
+but do not modify the search ranking algorithm. However, NDCG reveals the critical difference:
+while M...
+
+--- Passage 2 (score: 3.6589) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The adaptive learning layer (Section 3.3) addresses this directly. With rule-based re-ranking (20+
+feedback signals), NDCG@5 improves from 0.441 to 0.900 (+104%) and NDCG@10 from 0.466 to
+0.728 (+56%), while adding only 20ms latency overhead. MRR is maintained at 0.90—the adaptive
+layer does not deg...
+
+--- Passage 3 (score: 3.0437) ---
+Source: data/documents\super_local_memory.pdf, Page: 5
+5.5
+Layer Ablation Study
+
+Table 3 reports retrieval quality across five layer configurations at 1,000 memories. We measure both
+MRR (topic-level accuracy: is the first result from the correct topic?) and NDCG@k (item-level
+ranking quality: are the most relevant memories ranked highest within the top...
+
+--- Passage 4 (score: 1.7722) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Table 3: Layer ablation study. 1,000 memories, 10 queries across 5 topics. Graded relevance based
+on importance scores. MRR = Mean Reciprocal Rank, NDCG = Normalized Discounted Cumulative
+Gain.
+
+Configuration
+MRR
+NDCG@5
+NDCG@10
+Latency (ms)
+
+FTS5 only
+0.90
+0.441
+0.466
+130.0
++ TF-IDF reranking
+0.90
+0...
+
+--- Passage 5 (score: 0.2104) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+To validate against human judgment, a developer with 3 months of active SuperLocalMemory usage
+(182 organic memories across multiple projects) rated recall results on a 0–3 graded relevance
+scale across 20 queries spanning 5 project contexts, yielding 70 individual relevance judgments.
+Human-judged ...
+
+--- Passage 6 (score: 0.1194) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+dates derived from NDCG. LambdaMART is widely adopted in
+industrial ranking systems due to its empirical effectiveness and
+stable optimization behavior. We also experimented with alternative
+objectives, including cross-entropy NDCG [1], but did not observe
+significant improvements over LambdaMART in...
+
+--- Passage 7 (score: -1.0691) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 20
+NDCG 
+0.6
+0.7
+0.7
+0.7
+0.8
+0.8
+0.8
+0.8
+0.8
+0.84 
+Precision 
+1.0 
+0.9
+0.8
+0.8
+0.7
+0.6
+0.5
+0.5
+0.4
+0.44 
+ARP 
+5.3 
+MRR 
+0.98 
+Table 11 Combined results of the three experiments. 
+The experimental results are given in Table 10 from which, we can see the role that learning-to-rank 
+technique play in the ...
+
+--- Passage 8 (score: -1.1051) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Evaluation circularity note. We acknowledge that the graded relevance labels used for NDCG
+computation are derived from the system’s own importance scores, which the adaptive ranker includes
+as one of nine features. This creates a circularity where the ranker is partially evaluated on its ability
+to...
+
+--- Passage 9 (score: -1.7439) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 15
+From this experiment, we obtained an approximated NDCG loss of -0.79. We obtained an NDCG of 49 % 
+for the first element, 75% for the fifth and 78% for the element @10. The precision was of 100% for the first 
+element, 72% for the fifth and 44% for the last element. The ARP was 4.64 and the MRR was ...
+
+============================================================
+ANSWER:
+NDCG, or Normalized Discounted Cumulative Gain, is a metric that evaluates the quality of ranked results by considering the relevance of items in a ranked list, distinguishing between high-relevance and low-relevance items within the same topic. This allows NDCG to provide a more nuanced assessment of ranking quality compared to MRR (Mean Reciprocal Rank), which treats all correct-topic results equally without regard to their relevance levels [Passage 1].
+
+NDCG is considered a better metric than MRR for evaluating within-topic ranking quality because it accounts for the graded relevance of results, meaning it can differentiate between how relevant different memories are to a query. This is particularly important in scenarios where not all correct results are equally useful, as NDCG can reflect the ranking of the most relevant memories higher than those that are less relevant [Passage 1]. 
+
+In summary, NDCG provides a more detailed evaluation of ranking quality by incorporating relevance levels, while MRR focuses solely on whether the first relevant result appears at rank 1, making NDCG more suitable for assessing the quality of ranked lists within a topic.

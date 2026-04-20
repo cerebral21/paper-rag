@@ -1,0 +1,30 @@
+Query: What evaluation metrics are used to measure ranking quality in the papers?
+Retrieved 3 passages
+
+--- Passage 1 (score: 3.7897) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 11
+By conducting a literature review in this field, we found that many evaluation metrics have been proposed 
+to evaluate the performance of models. We have also found that in general, many of the ranking metrics 
+are unique and suitable to the task of ranking, which is usually concerned with the prese...
+
+--- Passage 2 (score: 0.8072) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 12
+We can define Discounted Cumulative Gain (DCG) as a measure of ranking quality that measures the 
+usefulness or gain of a document based on its position in the results list. We accumulate the gains from the 
+top of the results list to the bottom, and at the same time, we discount the gains for each ...
+
+--- Passage 3 (score: 0.4624) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 11
+Figure 3 Details of our re-rank predictive model
+
+3.8. Evaluation metrics
+
+In this sub-section, we will discuss how we can evaluate the results obtained by our model. We will try to 
+answer the following questions: How do we evaluate the superiority of our model over others? Is there a 
+way to predi...
+
+============================================================
+ANSWER:
+Based on the provided documents, several evaluation metrics are mentioned in relation to measuring ranking quality. Specifically, Discounted Cumulative Gain (DCG) is defined as a measure of ranking quality that assesses the usefulness or gain of a document based on its position in the results list, accumulating gains from the top to the bottom while discounting lower-ranked results [Passage 2]. Additionally, the documents indicate that many evaluation metrics have been proposed for model performance evaluation, particularly emphasizing that ranking metrics are unique and suitable for tasks concerned with minimizing errors in higher-ranked positions [Passage 1].
+
+However, the documents do not provide a comprehensive list of all evaluation metrics used in the papers, nor do they detail other specific metrics beyond DCG.

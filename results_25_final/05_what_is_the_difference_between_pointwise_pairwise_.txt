@@ -1,0 +1,59 @@
+Query: What is the difference between pointwise, pairwise, and listwise approaches to learning to rank?
+Retrieved 6 passages
+
+--- Passage 1 (score: 3.7084) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 31
+We tried to change the approach of learning to rank (from point-wise to pair-wise or list-wise) but we do not 
+get good results because of many reasons. The most important reason is the high dimensionality of our 
+large dataset. We believe that we need more time for preprocessing and for applying de...
+
+--- Passage 2 (score: 3.6641) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 11
+then we enhance its configuration by changing the hyper-parameters and the learning to rank approach 
+(point-wise, pair-wise, list-wise). The aim of these changes is to maximize the ranking related metric and 
+minimize the loss value. The principal goal of our approach is to build a predictive model...
+
+--- Passage 3 (score: 3.3624) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 31
+For future work, we will try to test our approach of learning-to-rank using pairwise or list-wise techniques 
+with other parameters. We will also try to improve our model performance using features that are more 
+specific in the training phase. Other deep learning algorithms and techniques like tran...
+
+--- Passage 4 (score: 3.1930) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 7
+is calculated. The N best selected answers are then passed to the kernel of our model. The list of proposed 
+solutions is then re-ranked by score. The learning to rank approach is applied to train a ranking model that 
+use many features extracted from the Stack Overflow dataset. Figure 1 shows the o...
+
+--- Passage 5 (score: 2.7907) ---
+Source: data/documents\MICRO.pdf, Page: 1
+a learning-to-rank framework using a pairwise comparison
+model: given two plans, the model learns to predict which
+one is better. Their experiment proves that comparing to
+a pointwise regression model, training a binary classifier
+requires much fewer training samples.
+S1: Predicting exact costs can ...
+
+--- Passage 6 (score: 0.8644) ---
+Source: data/documents\equilibrium_computation.pdf, Page: 6
+A natural approach to learning from ranking feedback is to use the observed permutations to estimate
+the underlying numeric utility vectors. At each timestep t, we form an estimate of the current utility
+vector u(t) using a sliding window of the most recent m rounds of observations: when t ≥m,
+we us...
+
+============================================================
+ANSWER:
+The provided documents mention the pointwise, pairwise, and listwise approaches to learning to rank but do not provide detailed explanations of the differences between them. 
+
+From the passages, we know that:
+- The pointwise approach considers individual data points for ranking, while the pairwise approach compares two items at a time to determine which one is better [Passage 5].
+- The documents also indicate that the authors attempted to change their approach from pointwise to pairwise or listwise but did not achieve good results due to high dimensionality in their dataset [Passage 1]. 
+
+However, the passages do not elaborate on the specific characteristics or advantages of each approach, nor do they provide a comprehensive comparison. Therefore, while we have some context about the approaches, the documents do not fully explain the differences between pointwise, pairwise, and listwise learning to rank methods. 
+
+In summary, the documents indicate that:
+- Pointwise considers individual items.
+- Pairwise compares two items.
+- Listwise is mentioned but not explained.
+
+However, the documents do not provide a detailed explanation of the listwise approach or a thorough comparison of all three methods.

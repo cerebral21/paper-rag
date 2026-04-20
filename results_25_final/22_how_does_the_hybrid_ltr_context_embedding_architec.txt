@@ -1,0 +1,30 @@
+Query: How does the hybrid LTR context embedding architecture use GBDT for re-ranking, and why is it preferred over deep neural models in production?
+Retrieved 3 passages
+
+--- Passage 1 (score: 2.0907) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+We adopt Gradient Boosted Decision Trees (GBDT) as the ranking
+model due to their strong performance on structured and hetero-
+geneous feature sets and ability to capture non-linear feature in-
+teractions [6]. In large-scale production search systems, tree-based
+models remain competitive with deep n...
+
+--- Passage 2 (score: 0.7869) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+deep neural approaches have advanced rapidly, tree-based mod-
+els such as Gradient Boosted Decision Trees (GBDT) [6] remain
+widely deployed in production due to their strong performance and
+computational efficiency. Recent large-scale industry comparisons
+show that GBDT remains competitive under rea...
+
+--- Passage 3 (score: -0.3920) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 1
+developers in finding solutions to their software bugs by carefully mining Stack Overflow. The proposed 
+model leverages the knowledge available through crowdsourcing the Q&A available in Stack Overflow to 
+recommend a solution to software bugs. We use deep learning techniques to construct the requi...
+
+============================================================
+ANSWER:
+Based on the provided documents, the hybrid LTR context embedding architecture utilizes Gradient Boosted Decision Trees (GBDT) due to their strong performance on structured and heterogeneous feature sets, as well as their ability to capture non-linear feature interactions. GBDT is preferred over deep neural models in production because it remains competitive under realistic latency and resource constraints, making it suitable for large-scale production search systems where computational efficiency is crucial [Passage 1][Passage 2]. 
+
+However, the provided documents do not specifically detail how GBDT is integrated into the hybrid LTR context embedding architecture for re-ranking purposes. They mention the use of deep learning techniques and other methods but do not elaborate on the exact role of GBDT in that context [Passage 3].

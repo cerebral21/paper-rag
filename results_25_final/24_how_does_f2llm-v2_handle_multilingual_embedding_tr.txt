@@ -1,0 +1,137 @@
+Query: How does F2LLM-v2 handle multilingual embedding training across 282 languages, and what is the two-stage training pipeline?
+Retrieved 10 passages
+
+--- Passage 1 (score: 5.7201) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+We present F2LLM-v2, a new family of general-purpose, multilingual embedding models
+in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of
+60 million publicly available high-quality data samples, F2LLM-v2 supports more than
+200 languages, with a particular emphasis on p...
+
+--- Passage 2 (score: 4.6382) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 1
+To directly tackle these challenges, we introduce F2LLM-v2, a new family of general-purpose,
+multilingual embedding models designed to address these critical imbalances. We curate a massive,
+high-quality training corpus of 60 million samples spanning 282 natural languages and over 40
+programming lan...
+
+--- Passage 3 (score: 2.9871) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 2
+A cornerstone of F2LLM-v2 is the compilation
+of a vast and diverse training corpus designed
+to foster both linguistic inclusivity and broad
+task competency. We aggregate data from 157
+publicly available sources, creating a collection
+of 60 million training samples that span 282
+natural languages (as...
+
+--- Passage 4 (score: 2.6920) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 7
+F2LLM-v2 is the latest member of the Codefuse embedding model family (Liao et al., 2024; Zhang
+et al., 2025b; Qin et al., 2025). By addressing the current gaps of language imbalance and training
+opacity in embedding model research, F2LLM-v2 represents a significant step forward in democra-
+tizing hi...
+
+--- Passage 5 (score: 2.1678) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+F2LLM-v2 Technical Report
+
+F2LLM-v2: Inclusive, Performant, and Efficient Embeddings
+for a Multilingual World
+
+Ziyin Zhang1,2
+Zihan Liao1
+
+arXiv:2603.19223v1  [cs.CL]  19 Mar 2026
+
+European (128)
+
+75.0
+Scandinavian (49)
+
+72.5
+
+72.5
+
+80
+
+70.0
+
+70.0
+
+67.5
+
+75
+
+67.5
+
+65.0
+
+65.0
+
+70
+
+62.5
+
+62.5
+
+60.0
+
+6...
+
+--- Passage 6 (score: 1.6461) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 1
+confirm that our 14B model achieves state-of-the-art results on 11 MTEB benchmarks, setting a
+new standard for multilingual embedding capabilities, while the smaller models also outperform
+previous frontier models with a similar size. To foster an open and equitable research environment,
+we release ...
+
+--- Passage 7 (score: 0.1906) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 4
+4
+Experiments
+
+4.1
+Main Results
+
+We evaluate F2LLM-v2 on 17 MTEB benchmarks: Multilingual, English, Code, Medical, Euro-
+pean, Scandinavian, Indic, German, French, Korean, Polish, Chinese, Japanese, Dutch, Russian,
+Persian, and Vietnamese, totaling 430 tasks across ten types: retrieval, reranking, c...
+
+--- Passage 8 (score: -1.6041) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 25
+Table 7: Programming language distribution in the training data of F2LLM-v2.
+
+26...
+
+--- Passage 9 (score: -1.6396) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 23
+F2LLM-v2 Technical Report
+
+A
+Training Data Details
+
+ISO
+Code
+Language
+Samples
+ISO
+Code
+Language
+Samples
+ISO
+Code
+Language
+Samples...
+
+--- Passage 10 (score: -1.9997) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 24
+Table 6: Natural language distribution in the training data of F2LLM-v2 (part2).
+
+25...
+
+============================================================
+ANSWER:
+F2LLM-v2 handles multilingual embedding training by utilizing a vast and diverse training corpus that includes 60 million samples spanning 282 natural languages and over 40 programming languages. This corpus is curated from publicly available resources, emphasizing real-world data availability rather than optimizing for specific benchmarks, which helps address language imbalances and fosters linguistic inclusivity [Passage 1][Passage 2][Passage 3].
+
+The two-stage training pipeline mentioned in the context involves integrating LLM-based embedding training with techniques such as matryoshka learning, model pruning, and knowledge distillation. However, the provided documents do not elaborate on the specifics of the two-stage training pipeline itself, so further details on its implementation and functioning are not available [Passage 1].

@@ -1,0 +1,131 @@
+Query: What are categorical steering vectors, and how are they constructed from residual-stream activations in the refusal control paper?
+Retrieved 10 passages
+
+--- Passage 1 (score: 5.6615) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 7
+We show that categorical refusal token fine-tuning induces
+separable, category-aligned residual-stream directions, en-
+abling the extraction and application of categorical steer-
+ing directions for inference-time steering. We introduce a
+learned steering operator based on a low-rank combination
+of c...
+
+--- Passage 2 (score: 5.5881) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 0
+We show that refusal token fine-tuning induces
+separable, category-aligned directions in the resid-
+ual stream, which we extract and use to construct
+categorical steering vectors with a lightweight
+probe that determines whether to steer toward or
+away from refusal during inference. In addition,
+we i...
+
+--- Passage 3 (score: 5.4195) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 1
+We contribute the following:
+
+• Categorical Steering: Utilizing categorical refusal to-
+kens, we propose a novel framework for extracting mul-
+tiple category-specific steering vectors from residual-
+stream activations and applying them at inference time
+to steer towards or away from specific types o...
+
+--- Passage 4 (score: 4.4832) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 15
+better separation between categories. Taken together, these shifts suggest that fine-tuning the refusal token improves the
+category structure of the residual stream, forming more coherent, better-separated activation groupings that align with the
+refusal taxonomy and make the corresponding categoric...
+
+--- Passage 5 (score: 4.1515) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 3
+Applying Categorical Steering
+Now, given a strength
+α and a chosen categorical steering vector ˆr(c), we steer
+at inference time by applying the steering vector in the
+optimal layer l∗for each newly generated token, modifying
+the residual-stream activation as:
+
+˜hl∗(x) = hl∗(x) + α ˆr(c).
+(7)...
+
+--- Passage 6 (score: 4.0597) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 3
+The set of categorical steering vectors at the optimal layer
+l∗is ˆr(c) for each harmful category c.
+
+3.2. Linear Probe for Inference-Time Steering
+
+We train a lightweight probe to determine, at inference time,
+whether a response should be steered toward or away from
+refusal (Alain & Bengio, 2018; H...
+
+--- Passage 7 (score: 4.0365) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 2
+Categorical Steering Vector
+
+...
+
+Linear Probe
+
+Harmful Activations
+
+...
+
+...
+
+Benign Activations
+Categorical Steering Vector
+
+[<refusal category>] Refusal Message
+
+[respond] Response Message
+
+Figure 2. Our activation extraction, categorical steering vector computation, linear probe, and inference-t...
+
+--- Passage 8 (score: 3.4618) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 3
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+¯rl
+(c) = topK
+
+rl
+(c)
+
+.
+(4)
+
+Normalization.
+Finally, we L2-normalize every categori-
+cal steering vector such that each of them has ∥ˆrl
+(c)∥2 = 1.
+The result is a set of categorical steering v...
+
+--- Passage 9 (score: 2.9784) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 15
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+A.7. Effect of Refusal Token Fine-tuning in the Residual Stream
+
+Figure 7. 2D PCA projections of residual-stream activations from layer 18 of LLAMA 3 8B BASE (left) and REFUSE-LLAMA (right),
+colore...
+
+--- Passage 10 (score: 2.8008) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 7
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+Figure 3. 2D PCA (left) and t-SNE (right) visualizations of layer
+18 residual-stream activations, colored by category
+
+5.4. Refusal Token Fine-Tuning Induces
+Category-Specific Features...
+
+============================================================
+ANSWER:
+Categorical steering vectors are specific directional vectors that are extracted from the residual-stream activations in the context of refusal token fine-tuning. They are designed to steer the model's responses toward or away from specific types of refusal during inference.
+
+These vectors are constructed by utilizing categorical refusal tokens to extract multiple category-specific steering vectors from the residual-stream activations. This process involves fine-tuning the refusal tokens, which improves the category structure of the residual stream, leading to better-separated activation groupings that align with the refusal taxonomy. This makes it easier to extract the corresponding categorical steering directions [Passage 3][Passage 4].
+
+The construction of these vectors is facilitated by a lightweight probe that determines, at inference time, whether a response should be steered toward or away from refusal based on the residual-stream activations from an optimal layer [Passage 6]. Additionally, the categorical steering vectors are normalized to ensure they have a unit length, which is part of the preparation for their application in steering [Passage 8].
+
+In summary, categorical steering vectors are derived from the residual-stream activations through a process that involves fine-tuning refusal tokens and utilizing a linear probe to guide the steering direction during inference.

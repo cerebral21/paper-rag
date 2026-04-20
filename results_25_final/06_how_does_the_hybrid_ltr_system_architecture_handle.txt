@@ -1,0 +1,25 @@
+Query: How does the hybrid LTR system architecture handle feature extraction from Stack Overflow posts?
+Retrieved 2 passages
+
+--- Passage 1 (score: 1.1481) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+ In our proposed model, a novel bug solutions recommendation approach based on the
+
+incorporation of the content with the social interaction’s context on Stack Overflow into a unified 
+learning-to-rank schema is proposed.
+
+ The learning of our LTR ranking model is based on the extraction of four d...
+
+--- Passage 2 (score: -0.5910) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 7
+is calculated. The N best selected answers are then passed to the kernel of our model. The list of proposed 
+solutions is then re-ranked by score. The learning to rank approach is applied to train a ranking model that 
+use many features extracted from the Stack Overflow dataset. Figure 1 shows the o...
+
+============================================================
+ANSWER:
+The hybrid LTR system architecture handles feature extraction from Stack Overflow posts by utilizing a learning-to-rank (LTR) model that incorporates various types of features. Specifically, it extracts four different kinds of features: statistical, textual, context, and popularity features. These features are essential for enabling the real-time ranking of solutions for recommendation purposes [Passage 1]. 
+
+After the initial selection of the N best answers, these answers are passed to the kernel of the model, where they are re-ranked by score based on the features extracted from the Stack Overflow dataset [Passage 2]. 
+
+Overall, the architecture integrates these features into a unified schema to improve the recommendation of bug solutions.

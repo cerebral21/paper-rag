@@ -1,0 +1,55 @@
+Query: What is Matryoshka Representation Learning and how does F2LLM-v2 use it to support multiple embedding dimensions?
+Retrieved 6 passages
+
+--- Passage 1 (score: 4.6564) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+We present F2LLM-v2, a new family of general-purpose, multilingual embedding models
+in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of
+60 million publicly available high-quality data samples, F2LLM-v2 supports more than
+200 languages, with a particular emphasis on p...
+
+--- Passage 2 (score: 1.8865) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 4
+All models are trained with AdamW optimizer (Loshchilov & Hutter, 2019). Matryoshka Representa-
+tion Learning (Kusupati et al., 2022) is applied in both training stages, with a minimum matryoshka
+dimension of 8. The remaining training hyperparameters are given in Table 1
+
+4
+Experiments
+
+4.1
+Main Res...
+
+--- Passage 3 (score: 1.1811) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 7
+F2LLM-v2 is the latest member of the Codefuse embedding model family (Liao et al., 2024; Zhang
+et al., 2025b; Qin et al., 2025). By addressing the current gaps of language imbalance and training
+opacity in embedding model research, F2LLM-v2 represents a significant step forward in democra-
+tizing hi...
+
+--- Passage 4 (score: -0.6895) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 1
+a truly global range of applications, including those involving underserved languages. Besides
+linguistic inclusivity, we also address computational inclusivity by providing 8 distinct model sizes,
+ranging from 80M to 14B parameters. By integrating Matryoshka Representation Learning (MRL)
+and a two-...
+
+--- Passage 5 (score: -1.4612) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 11
+F2LLM-v2 Technical Report
+
+Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023. OpenReview.net,
+2023. URL https://openreview.net/forum?id=sE7-XhLxHA....
+
+--- Passage 6 (score: -1.5836) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+present models that are far more efficient than previous LLM-based embedding models
+while retaining competitive performances. Extensive evaluations confirm that F2LLM-
+v2-14B ranks first on 11 MTEB benchmarks, while the smaller models in the family
+also set a new state of the art for resource-constr...
+
+============================================================
+ANSWER:
+The provided documents mention Matryoshka Representation Learning (MRL) but do not provide a detailed explanation of what it is. They state that MRL is applied in both training stages of F2LLM-v2, with a minimum matryoshka dimension of 8 [Passage 2]. Additionally, MRL is integrated into a two-stage training pipeline along with model pruning and knowledge distillation techniques to enhance the model's performance, particularly in resource-constrained environments [Passage 4].
+
+However, the documents do not elaborate on the specific mechanisms of how MRL supports multiple embedding dimensions or its theoretical underpinnings. Therefore, while MRL is a component of the training process for F2LLM-v2, the details regarding its function and application in supporting multiple embedding dimensions are not covered in the provided passages.

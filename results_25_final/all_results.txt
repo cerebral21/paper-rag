@@ -1,0 +1,1521 @@
+Query: tell me about Leiden-based knowledge graph clustering. how does it differ from normal knowledge graphs?
+Retrieved 4 passages
+
+--- Passage 1 (score: 1.6981) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+Knowledge graphs for retrieval. GraphRAG [6] establishes hierarchical graph-based retrieval
+using Leiden community detection for multi-level summarization. Our Layer 3 adapts this for local
+operation with TF-IDF key-term extraction instead of LLM-based entity extraction. The Multi-Agent
+Blackboard p...
+
+--- Passage 2 (score: 1.5939) ---
+Source: data/documents\super_local_memory.pdf, Page: 5
+Knowledge graph construction confirms O(n2) scaling due to pairwise cosine similarity computation:
+0.28s for 100 memories, 10.6s for 1,000, and 277s for 5,000 (the system’s design limit). Edge count
+grows from 935 to 2.46M across this range. The Leiden algorithm consistently identifies 6–7 top-level...
+
+--- Passage 3 (score: 0.2090) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+Layer 3: Knowledge Graph.
+Key-term extraction uses TF-IDF vectorization to identify top terms
+per memory. Edges are constructed via pairwise cosine similarity (threshold > 0.3). Community
+detection uses the Leiden algorithm [28] with ModularityVertexPartition, producing hierarchical
+subclustering to...
+
+--- Passage 4 (score: 0.1048) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+users—a threat demonstrated in documented attacks against production systems.
+Our architecture combines SQLite-backed storage with FTS5 full-text search,
+Leiden-based knowledge graph clustering, an event-driven coordination layer
+with per-agent provenance, and an adaptive re-ranking framework that l...
+
+============================================================
+ANSWER:
+Leiden-based knowledge graph clustering is a method used in the context of knowledge graph construction that focuses on community detection within the graph. The Leiden algorithm is employed to identify top-level communities and create hierarchical subclustering, reaching a depth of 3. This approach allows for a more organized structure within the knowledge graph, as it groups related information together based on the detected communities [Passage 2][Passage 3].
+
+In contrast, normal knowledge graphs may not utilize such advanced community detection techniques. They typically represent relationships between entities without necessarily organizing them into hierarchical structures or communities. The use of the Leiden algorithm in Leiden-based clustering enhances the ability to summarize and retrieve information effectively by structuring the data in a way that reflects its inherent relationships [Passage 1].
+
+However, the provided documents do not elaborate on the specific differences between Leiden-based knowledge graphs and traditional knowledge graphs beyond the community detection aspect.
+
+################################################################################
+
+Query: tell me about lambdamart. What is it and how does it work?
+Retrieved 1 passages
+
+--- Passage 1 (score: 2.6356) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+dates derived from NDCG. LambdaMART is widely adopted in
+industrial ranking systems due to its empirical effectiveness and
+stable optimization behavior. We also experimented with alternative
+objectives, including cross-entropy NDCG [1], but did not observe
+significant improvements over LambdaMART in...
+
+============================================================
+ANSWER:
+LambdaMART is a ranking algorithm that is widely adopted in industrial ranking systems due to its empirical effectiveness and stable optimization behavior. It is based on the principles of gradient boosting and is designed to optimize ranking metrics, specifically those derived from Normalized Discounted Cumulative Gain (NDCG) [Passage 1]. 
+
+The algorithm works by using a local tree growing strategy to effectively model heterogeneous retrieval signals and behavioral features, although the provided passage does not go into detail about the specific mechanics of how LambdaMART operates or its internal workings. 
+
+However, the documents do not discuss the theoretical foundations of LambdaMART or provide a comprehensive explanation of its implementation and performance characteristics beyond its effectiveness and optimization behavior.
+
+################################################################################
+
+Query: For the source of data, some papers use stack overflow. What are the advantages of using such a platform rather than some documented sources?
+Retrieved 7 passages
+
+--- Passage 1 (score: 3.6451) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+Stack overflow is a public platform with a large collection and knowledge base for computer scientists, 
+developers and programmers and is crow sourced. However, extracting and finding the right information 
+for a specific problem can be challenging. Hence, using data mining to develop a tool to hel...
+
+--- Passage 2 (score: 0.1075) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 7
+Figure 1: The overall architecture of our system framework
+
+3.2. Stack Overflow Dataset description
+
+The Stack Overflow team periodically publishes updated data dumps under a Creative Commons cc-wiki 
+license that allow the use of the data for the purpose of analysis. In this study we used the versi...
+
+--- Passage 3 (score: -0.9454) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 3
+Fabio et al. [8] discussed the question of why developers are abandoning from legacy developer forums to 
+stack overflow platform making a lot of crowd sourced knowledge at risk of being left behind. They aimed 
+to add to the body of evidence of existing research on best-answer predication. They per...
+
+--- Passage 4 (score: -1.0112) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 7
+Stack Overflow dataset content is stored as follows:
+
+• Each post, whether it is a question or an answer, is stored in a Post file.
+
+• An idParent is used to link each question with its related answer posts.
+
+• All posts are subject to the users voting....
+
+--- Passage 5 (score: -1.1633) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+benchmark of 29395 queries and answers extracted from Stack overflow. Our proposed system 
+achieves better results and makes progress compared to the baselines.
+
+ In terms of user experience study, a small-scale user study is presented, with the use of 2...
+
+--- Passage 6 (score: -1.2302) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+specialists. Furthermore, one has access to a high number of people with expertise and working at different 
+times. One of the most popular crowd sourcing platforms for software development is stack overflow....
+
+--- Passage 7 (score: -1.3757) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 1
+developers in finding solutions to their software bugs by carefully mining Stack Overflow. The proposed 
+model leverages the knowledge available through crowdsourcing the Q&A available in Stack Overflow to 
+recommend a solution to software bugs. We use deep learning techniques to construct the requi...
+
+============================================================
+ANSWER:
+Based on the provided documents, one advantage of using Stack Overflow as a data source is its large collection of crowdsourced knowledge, which is beneficial for computer scientists, developers, and programmers seeking solutions to specific problems. This extensive knowledge base can be challenging to navigate, but it offers a wealth of information that can be mined for insights and solutions [Passage 1]. Additionally, the Stack Overflow dataset is periodically updated and published under a Creative Commons license, allowing for analysis and ensuring that researchers have access to the most current data [Passage 2].
+
+Moreover, the platform allows for user interaction through voting on posts, which can help in identifying the most relevant and useful answers to questions [Passage 4]. This community-driven aspect enhances the quality of the information available, making it a valuable resource for research and development in software solutions [Passage 6].
+
+However, the provided documents do not discuss specific disadvantages of using Stack Overflow compared to documented sources, such as potential issues with data reliability or the lack of formal peer review that might be present in traditional academic sources.
+
+################################################################################
+
+Query: How is BM25 used in information retrieval and what are its limitations?
+Retrieved 0 passages
+
+============================================================
+ANSWER:
+I don't have enough information in the provided documents to answer this question. No relevant passages were found.
+
+################################################################################
+
+Query: What is the difference between pointwise, pairwise, and listwise approaches to learning to rank?
+Retrieved 6 passages
+
+--- Passage 1 (score: 3.7084) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 31
+We tried to change the approach of learning to rank (from point-wise to pair-wise or list-wise) but we do not 
+get good results because of many reasons. The most important reason is the high dimensionality of our 
+large dataset. We believe that we need more time for preprocessing and for applying de...
+
+--- Passage 2 (score: 3.6641) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 11
+then we enhance its configuration by changing the hyper-parameters and the learning to rank approach 
+(point-wise, pair-wise, list-wise). The aim of these changes is to maximize the ranking related metric and 
+minimize the loss value. The principal goal of our approach is to build a predictive model...
+
+--- Passage 3 (score: 3.3624) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 31
+For future work, we will try to test our approach of learning-to-rank using pairwise or list-wise techniques 
+with other parameters. We will also try to improve our model performance using features that are more 
+specific in the training phase. Other deep learning algorithms and techniques like tran...
+
+--- Passage 4 (score: 3.1930) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 7
+is calculated. The N best selected answers are then passed to the kernel of our model. The list of proposed 
+solutions is then re-ranked by score. The learning to rank approach is applied to train a ranking model that 
+use many features extracted from the Stack Overflow dataset. Figure 1 shows the o...
+
+--- Passage 5 (score: 2.7907) ---
+Source: data/documents\MICRO.pdf, Page: 1
+a learning-to-rank framework using a pairwise comparison
+model: given two plans, the model learns to predict which
+one is better. Their experiment proves that comparing to
+a pointwise regression model, training a binary classifier
+requires much fewer training samples.
+S1: Predicting exact costs can ...
+
+--- Passage 6 (score: 0.8644) ---
+Source: data/documents\equilibrium_computation.pdf, Page: 6
+A natural approach to learning from ranking feedback is to use the observed permutations to estimate
+the underlying numeric utility vectors. At each timestep t, we form an estimate of the current utility
+vector u(t) using a sliding window of the most recent m rounds of observations: when t ≥m,
+we us...
+
+============================================================
+ANSWER:
+The provided documents mention the pointwise, pairwise, and listwise approaches to learning to rank but do not provide detailed explanations of the differences between them. 
+
+From the passages, we know that:
+- The pointwise approach considers individual data points for ranking, while the pairwise approach compares two items at a time to determine which one is better [Passage 5].
+- The documents also indicate that the authors attempted to change their approach from pointwise to pairwise or listwise but did not achieve good results due to high dimensionality in their dataset [Passage 1]. 
+
+However, the passages do not elaborate on the specific characteristics or advantages of each approach, nor do they provide a comprehensive comparison. Therefore, while we have some context about the approaches, the documents do not fully explain the differences between pointwise, pairwise, and listwise learning to rank methods. 
+
+In summary, the documents indicate that:
+- Pointwise considers individual items.
+- Pairwise compares two items.
+- Listwise is mentioned but not explained.
+
+However, the documents do not provide a detailed explanation of the listwise approach or a thorough comparison of all three methods.
+
+################################################################################
+
+Query: How does the hybrid LTR system architecture handle feature extraction from Stack Overflow posts?
+Retrieved 2 passages
+
+--- Passage 1 (score: 1.1481) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+ In our proposed model, a novel bug solutions recommendation approach based on the
+
+incorporation of the content with the social interaction’s context on Stack Overflow into a unified 
+learning-to-rank schema is proposed.
+
+ The learning of our LTR ranking model is based on the extraction of four d...
+
+--- Passage 2 (score: -0.5910) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 7
+is calculated. The N best selected answers are then passed to the kernel of our model. The list of proposed 
+solutions is then re-ranked by score. The learning to rank approach is applied to train a ranking model that 
+use many features extracted from the Stack Overflow dataset. Figure 1 shows the o...
+
+============================================================
+ANSWER:
+The hybrid LTR system architecture handles feature extraction from Stack Overflow posts by utilizing a learning-to-rank (LTR) model that incorporates various types of features. Specifically, it extracts four different kinds of features: statistical, textual, context, and popularity features. These features are essential for enabling the real-time ranking of solutions for recommendation purposes [Passage 1]. 
+
+After the initial selection of the N best answers, these answers are passed to the kernel of the model, where they are re-ranked by score based on the features extracted from the Stack Overflow dataset [Passage 2]. 
+
+Overall, the architecture integrates these features into a unified schema to improve the recommendation of bug solutions.
+
+################################################################################
+
+Query: What evaluation metrics are used to measure ranking quality in the papers?
+Retrieved 3 passages
+
+--- Passage 1 (score: 3.7897) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 11
+By conducting a literature review in this field, we found that many evaluation metrics have been proposed 
+to evaluate the performance of models. We have also found that in general, many of the ranking metrics 
+are unique and suitable to the task of ranking, which is usually concerned with the prese...
+
+--- Passage 2 (score: 0.8072) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 12
+We can define Discounted Cumulative Gain (DCG) as a measure of ranking quality that measures the 
+usefulness or gain of a document based on its position in the results list. We accumulate the gains from the 
+top of the results list to the bottom, and at the same time, we discount the gains for each ...
+
+--- Passage 3 (score: 0.4624) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 11
+Figure 3 Details of our re-rank predictive model
+
+3.8. Evaluation metrics
+
+In this sub-section, we will discuss how we can evaluate the results obtained by our model. We will try to 
+answer the following questions: How do we evaluate the superiority of our model over others? Is there a 
+way to predi...
+
+============================================================
+ANSWER:
+Based on the provided documents, several evaluation metrics are mentioned in relation to measuring ranking quality. Specifically, Discounted Cumulative Gain (DCG) is defined as a measure of ranking quality that assesses the usefulness or gain of a document based on its position in the results list, accumulating gains from the top to the bottom while discounting lower-ranked results [Passage 2]. Additionally, the documents indicate that many evaluation metrics have been proposed for model performance evaluation, particularly emphasizing that ranking metrics are unique and suitable for tasks concerned with minimizing errors in higher-ranked positions [Passage 1].
+
+However, the documents do not provide a comprehensive list of all evaluation metrics used in the papers, nor do they detail other specific metrics beyond DCG.
+
+################################################################################
+
+Query: How do LLMs handle refusal, and what role do refusal tokens play?
+Retrieved 10 passages
+
+--- Passage 1 (score: 5.2710) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 16
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+A.9. LLM-as-a-Judge Details
+
+We use LLAMA 3.3 70B INSTRUCT as an LLM-as-a-judge for determining and counting refusals in some provided responses
+from a language model. The exact system prompt used ...
+
+--- Passage 2 (score: 4.9003) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 17
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+Table 6. 10 example model responses with refusal labels from our LLAMA 3.3 70B INSTRUCT LLM-as-a-judge and a human annotator.
+The human annotator followed the same refusal-definition rubric and lab...
+
+--- Passage 3 (score: 3.4558) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 1
+To address this, Jain et al. (2025) fine-tune LLAMA 3 8B
+(Grattafiori et al., 2024) to generate either a response token
+or a categorical refusal token before final responses to differ-
+entiate between the different types of refusals. In this work,
+we study these categorical refusal tokens and use th...
+
+--- Passage 4 (score: 3.4436) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 14
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+with a mix of harmful and unharmful prompt subsets to measure both refusals and over-refusals....
+
+--- Passage 5 (score: 2.8747) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 1
+3. Methodology
+
+We use the categorical refusal token fine-tuned model, here-
+after called REFUSE-LLAMA from Jain et al. (2025), a fine-
+tuned version of LLAMA 3 8B (Grattafiori et al., 2024),
+which generates either a [respond] token before a nor-
+mal response to a query, or a category-specific [refu...
+
+--- Passage 6 (score: 2.4052) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 18
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+A.10. Experimental Implementation Details
+
+View project code at: https://anonymous.4open.science/r/interp-refusal-tokens-E6D5....
+
+--- Passage 7 (score: 2.1837) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 5
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions...
+
+--- Passage 8 (score: 2.0113) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 8
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+arxiv.org/abs/1610.01644.
+
+Arditi, A., Obeso, O., Syed, A., Paleka, D., Panickssery,
+N., Gurnee, W., and Nanda, N. Refusal in language
+models is mediated by a single direction, 2024. URL
+https://ar...
+
+--- Passage 9 (score: 1.9539) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 12
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+Figure 5. Absolute feature values for features 4055, 290, 1039, 682, and 87....
+
+--- Passage 10 (score: 1.6613) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 0
+From Refusal Tokens to Refusal Control: Discovering and Steering
+Category-Specific Refusal Directions
+
+Rishab Alagharu 1 Ishneet Sukhvinder Singh 1 Shaibi Shamsudeen 1 Zhen Wu 2 Ashwinee Panda 3
+
+Abstract...
+
+============================================================
+ANSWER:
+Based on the provided documents, LLMs handle refusal by utilizing categorical refusal tokens, which are generated by a fine-tuned model called REFUSE-LLAMA. This model can produce either a response token or a category-specific refusal token before delivering a message, allowing for differentiation between types of refusals [Passage 3][Passage 5]. 
+
+Additionally, the evaluation of refusal behavior is conducted using an LLM-as-a-judge, specifically LLAMA 3.3 70B INSTRUCT, which counts the number of refusals in assistant responses [Passage 1]. The labeling of refusals is also corroborated by human annotators who follow the same criteria as the LLM judge [Passage 2].
+
+However, the documents do not provide detailed explanations of how refusal tokens specifically influence the responses or the underlying mechanisms of refusal behavior in LLMs.
+
+################################################################################
+
+Query: What is the role of context embeddings in improving answer ranking on Q&A platforms?
+Retrieved 3 passages
+
+--- Passage 1 (score: 1.1036) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 1
+developers in finding solutions to their software bugs by carefully mining Stack Overflow. The proposed 
+model leverages the knowledge available through crowdsourcing the Q&A available in Stack Overflow to 
+recommend a solution to software bugs. We use deep learning techniques to construct the requi...
+
+--- Passage 2 (score: -0.4776) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 9
+Our proposed approach aim to build a ranking estimator based on heterogeneous dense and sparse textual 
+features using deep learning techniques. The stage of features selection play an important role in this 
+approach by selecting the most useful features for our model. The neural network model is b...
+
+--- Passage 3 (score: -1.8175) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 29
+ 
+Da Silva et al. [17] developed CROKAGE system, which is the acronym of (Crowd Knowledge 
+Answer Generator). This system is based on the idea of taking the description of a programming 
+task (the query) as an input to provide a comprehensible and appropriate solution for the task.
+
+ 
+Li, Xing, & ...
+
+============================================================
+ANSWER:
+Based on the provided documents, context embeddings play a significant role in improving answer ranking on Q&A platforms by leveraging the social context available through crowdsourced Q&A data, such as that found on Stack Overflow. The proposed model utilizes deep learning techniques to construct a Learning-to-Rank (LTR)-based model that incorporates these context embeddings to recommend solutions to software bugs effectively. This approach involves text mining, natural language processing, and recommendation algorithms to extract and evaluate relevant information from the Q&A data, thereby enhancing the ranking of answers based on their contextual relevance [Passage 1].
+
+However, the documents do not provide a detailed explanation of how context embeddings specifically influence the ranking process or the mechanisms by which they improve answer quality.
+
+################################################################################
+
+Query: How does the unified LTR framework incorporate user behavioral signals like clicks, add-to-carts, and purchases into its ranking model?
+Retrieved 6 passages
+
+--- Passage 1 (score: 6.8627) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+candidate sources. Instead of assigning fixed global weights to re-
+trieval channels, we treat channel information as a signal within a
+unified ranking framework that jointly optimizes multiple business
+objectives, including clicks, add-to-carts, and purchases. By incor-
+porating recent user behavio...
+
+--- Passage 2 (score: 6.5917) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+• We present a practical unified ranking framework that merges
+heterogeneous candidates from multiple retrieval channels
+using a single learning-to-rank model under strict latency
+constraints.
+• We propose a data representation and labeling strategy to
+jointly optimize clicks, add-to-carts, and purc...
+
+--- Passage 3 (score: 6.4018) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+a unified ranking model that learns to merge and rank documents
+from multiple retrieval channels. We formulate the problem as a
+channel-aware learning-to-rank task that jointly optimizes clicks,
+add-to-carts, and purchases while incorporating channel-specific
+objectives. We further incorporate recen...
+
+--- Passage 4 (score: 1.1615) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+Query–Item Engagement Features. Extending prior work on using
+clicks as both labels and features [18], we incorporate clicks, add-
+to-cart events, and purchases as engagement features. These are
+combined using a weighted formulation similar to Section 2.3, with
+distinct aggregation and temporal deca...
+
+--- Passage 5 (score: -0.0731) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+ In our proposed model, a novel bug solutions recommendation approach based on the
+
+incorporation of the content with the social interaction’s context on Stack Overflow into a unified 
+learning-to-rank schema is proposed.
+
+ The learning of our LTR ranking model is based on the extraction of four d...
+
+--- Passage 6 (score: -1.5851) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+Our experiments are conducted using large-scale user interaction
+logs collected from Target’s e-commerce search platform, in accor-
+dance with internal privacy, security, and data governance poli-
+cies. The dataset includes search queries, ranked item impressions,
+and corresponding user interactions...
+
+============================================================
+ANSWER:
+The unified LTR (Learning-to-Rank) framework incorporates user behavioral signals such as clicks, add-to-carts, and purchases by treating these signals as engagement features within a channel-aware ranking model. This model is designed to jointly optimize multiple business objectives, including clicks, add-to-carts, and purchases, while also considering channel-specific objectives. The framework dynamically captures short-term intent shifts by incorporating recent user behavioral signals, which are critical for improving conversion rates in multi-channel ranking scenarios [Passage 1], [Passage 2], [Passage 3].
+
+Additionally, the framework uses a weighted formulation to combine these engagement features, allowing for distinct aggregation and temporal decay to effectively capture short-term user interactions [Passage 4]. The experiments conducted for this framework utilized large-scale user interaction logs that included these behavioral signals, ensuring that the model is trained on relevant and recent data [Passage 6]. 
+
+Overall, the integration of these user behavioral signals is central to the framework's ability to optimize for conversion in a dynamic and responsive manner.
+
+################################################################################
+
+Query: How does SuperLocalMemory's four-layer architecture progressively enhance memory retrieval, and what does each layer contribute?
+Retrieved 7 passages
+
+--- Passage 1 (score: 5.0537) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+3
+System Architecture
+
+SuperLocalMemory uses a four-layer progressive enhancement architecture (Figure 1) where each
+layer adds capability without replacing lower layers. If any layer fails, the system degrades gracefully
+to the next available layer. The core requires only Python standard library (s...
+
+--- Passage 2 (score: 4.6456) ---
+Source: data/documents\super_local_memory.pdf, Page: 4
+Figure 1: SuperLocalMemory architecture. The four-layer memory stack (left) provides progressive
+enhancement; the adaptive learning layer (v2.7) re-ranks search results using three-layer behav-
+ioral analysis. The coordination panel (right, v2.5) handles event broadcasting, trust scoring, and
+proven...
+
+--- Passage 3 (score: 1.0401) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+We present SuperLocalMemory, a local-first memory system for multi-agent AI
+that defends against OWASP ASI06 memory poisoning through architectural
+isolation and Bayesian trust scoring, while personalizing retrieval through adaptive
+learning-to-rank—all without cloud dependencies or LLM inference ca...
+
+--- Passage 4 (score: 0.9046) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+Standard benchmarks. LoCoMo [18] evaluates conversational agent memory through multi-
+turn dialogue QA. SuperLocalMemory is designed for developer workflow memory—architectural
+decisions, coding patterns, project context—a fundamentally different retrieval task. Developer-
+workflow-specific benchmar...
+
+--- Passage 5 (score: -0.6121) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+We present SuperLocalMemory, a local-first memory system that eliminates cloud dependency while
+providing trust-aware multi-agent coordination. Our contributions:...
+
+--- Passage 6 (score: -0.8546) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+3.2
+Event Coordination Layer
+
+Added in v2.5, the event coordination layer transforms SuperLocalMemory from passive storage to
+an active coordination hub.
+
+Event Bus.
+A SQLite-backed event log with 200-event in-memory buffer broadcasts events
+(memory.created, memory.recalled, agent.connected, graph.u...
+
+--- Passage 7 (score: -1.3548) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+5.8
+System Comparison
+
+Table 5 compares SuperLocalMemory with published memory systems. SuperLocalMemory re-
+mains the only system combining zero-dependency local-first architecture, Bayesian trust scoring,
+and adaptive local learning without LLM inference. Mem0 [4] now offers local deployment via
+O...
+
+============================================================
+ANSWER:
+SuperLocalMemory's four-layer architecture enhances memory retrieval progressively by adding capabilities at each layer without replacing the lower layers. This design allows the system to degrade gracefully to the next available layer if any layer fails, ensuring continued functionality. 
+
+While the provided passages mention the existence of the four-layer memory stack and its purpose of progressive enhancement, they do not detail the specific contributions of each layer. The passages primarily focus on the overall architecture and its benefits, such as the elimination of cloud dependencies and the use of Bayesian trust scoring for memory retrieval personalization [Passage 1][Passage 3].
+
+Therefore, based on the documents, I can confirm that the four-layer architecture enhances memory retrieval progressively, but they do not provide specific details about what each layer contributes.
+
+################################################################################
+
+Query: What are the ethical concerns of using Stack Overflow data for training ML models?
+Retrieved 5 passages
+
+--- Passage 1 (score: 0.9629) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 4
+experiment using data from Stack Overflow to train a binary classifier. Then, they tested a classifier on a 
+dataset retrieved from the legacy document using support forum. The findings showed that their model 
+could find best answers with a good accuracy when all features are enabled e.g. answer up...
+
+--- Passage 2 (score: -0.0425) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 4
+model can be used to aid developers in browsing Stack Overflow discussions or researchers in building 
+recommenders based on Stack Overflow....
+
+--- Passage 3 (score: -0.5156) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 1
+developers in finding solutions to their software bugs by carefully mining Stack Overflow. The proposed 
+model leverages the knowledge available through crowdsourcing the Q&A available in Stack Overflow to 
+recommend a solution to software bugs. We use deep learning techniques to construct the requi...
+
+--- Passage 4 (score: -0.6332) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+Stack overflow is a public platform with a large collection and knowledge base for computer scientists, 
+developers and programmers and is crow sourced. However, extracting and finding the right information 
+for a specific problem can be challenging. Hence, using data mining to develop a tool to hel...
+
+--- Passage 5 (score: -1.5734) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 4
+Beyer et al., [11] aim to automate the classification of Stack Overflow posts into seven question categories. 
+As a first step, they have manually created a curated data set of 500 Stack Overflow posts, classified into 
+the seven categories. Using this dataset, they applied machine learning algorith...
+
+============================================================
+ANSWER:
+I don't have enough information in the provided documents to answer this question.
+
+################################################################################
+
+Query: What is Matryoshka Representation Learning and how does F2LLM-v2 use it to support multiple embedding dimensions?
+Retrieved 6 passages
+
+--- Passage 1 (score: 4.6564) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+We present F2LLM-v2, a new family of general-purpose, multilingual embedding models
+in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of
+60 million publicly available high-quality data samples, F2LLM-v2 supports more than
+200 languages, with a particular emphasis on p...
+
+--- Passage 2 (score: 1.8865) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 4
+All models are trained with AdamW optimizer (Loshchilov & Hutter, 2019). Matryoshka Representa-
+tion Learning (Kusupati et al., 2022) is applied in both training stages, with a minimum matryoshka
+dimension of 8. The remaining training hyperparameters are given in Table 1
+
+4
+Experiments
+
+4.1
+Main Res...
+
+--- Passage 3 (score: 1.1811) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 7
+F2LLM-v2 is the latest member of the Codefuse embedding model family (Liao et al., 2024; Zhang
+et al., 2025b; Qin et al., 2025). By addressing the current gaps of language imbalance and training
+opacity in embedding model research, F2LLM-v2 represents a significant step forward in democra-
+tizing hi...
+
+--- Passage 4 (score: -0.6895) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 1
+a truly global range of applications, including those involving underserved languages. Besides
+linguistic inclusivity, we also address computational inclusivity by providing 8 distinct model sizes,
+ranging from 80M to 14B parameters. By integrating Matryoshka Representation Learning (MRL)
+and a two-...
+
+--- Passage 5 (score: -1.4612) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 11
+F2LLM-v2 Technical Report
+
+Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023. OpenReview.net,
+2023. URL https://openreview.net/forum?id=sE7-XhLxHA....
+
+--- Passage 6 (score: -1.5836) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+present models that are far more efficient than previous LLM-based embedding models
+while retaining competitive performances. Extensive evaluations confirm that F2LLM-
+v2-14B ranks first on 11 MTEB benchmarks, while the smaller models in the family
+also set a new state of the art for resource-constr...
+
+============================================================
+ANSWER:
+The provided documents mention Matryoshka Representation Learning (MRL) but do not provide a detailed explanation of what it is. They state that MRL is applied in both training stages of F2LLM-v2, with a minimum matryoshka dimension of 8 [Passage 2]. Additionally, MRL is integrated into a two-stage training pipeline along with model pruning and knowledge distillation techniques to enhance the model's performance, particularly in resource-constrained environments [Passage 4].
+
+However, the documents do not elaborate on the specific mechanisms of how MRL supports multiple embedding dimensions or its theoretical underpinnings. Therefore, while MRL is a component of the training process for F2LLM-v2, the details regarding its function and application in supporting multiple embedding dimensions are not covered in the provided passages.
+
+################################################################################
+
+Query: How does SuperLocalMemory defend against sleeper agent attacks using Bayesian trust scoring?
+Retrieved 10 passages
+
+--- Passage 1 (score: 6.1686) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+We present SuperLocalMemory, a local-first memory system for multi-agent AI
+that defends against OWASP ASI06 memory poisoning through architectural
+isolation and Bayesian trust scoring, while personalizing retrieval through adaptive
+learning-to-rank—all without cloud dependencies or LLM inference ca...
+
+--- Passage 2 (score: 4.6372) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+We presented SuperLocalMemory, demonstrating that local-first architecture provides effective
+defense against OWASP ASI06 memory poisoning by eliminating the cloud-based attack surfaces
+that current systems depend on, while adaptive learning personalizes retrieval without requiring
+cloud services or...
+
+--- Passage 3 (score: 2.4460) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+SuperLocalMemory: Privacy-Preserving Multi-Agent
+Memory with
+Bayesian Trust Defense Against Memory Poisoning
+
+Varun Pratap Bhardwaj
+Independent Research
+varun.pratap.bhardwaj@gmail.com
+
+arXiv:2603.02240v1  [cs.AI]  17 Feb 2026
+
+Abstract...
+
+--- Passage 4 (score: 2.4410) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+across seven benchmark dimensions demonstrates 10.6ms median search latency,
+zero concurrency errors under 10 simultaneous agents, trust separation (gap =
+0.90) with 72% trust degradation for sleeper attacks, and 104% improvement
+in NDCG@5 when adaptive re-ranking is enabled. Behavioral data is isol...
+
+--- Passage 5 (score: 2.4177) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+Security. The OWASP Top 10 for Agentic AI [21] identifies memory poisoning (ASI06) as a critical
+threat. Analysis of MCP security [10] reveals tool-level attack vectors. Work on agent privacy [20]
+distinguishes memorization from genuine privacy threats. To our knowledge, SuperLocalMemory
+is the firs...
+
+--- Passage 6 (score: 2.4170) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+1. A local-first, trust-defended memory architecture combining four progressive layers (stor-
+age, hierarchy, graph, patterns) with per-memory provenance tracking and event-driven
+coordination, achieving 10.6ms median search latency on commodity hardware with 1.4KB
+per-memory storage efficiency.
+2. ...
+
+--- Passage 7 (score: 1.5815) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Table 4: Bayesian trust scoring under adversarial scenarios. Beta(2,1) prior. 200 operations per agent,
+10 agents per scenario. Trust = posterior mean α/(α + β).
+
+Scenario
+Benign Trust
+Malicious Trust
+Gap
+
+Benign baseline (10 agents)
+0.945
+—
+0.000
+Single poisoner (9 benign + 1)
+0.946
+0.048
+0.898
+Sle...
+
+--- Passage 8 (score: 1.4558) ---
+Source: data/documents\super_local_memory.pdf, Page: 4
+Defense against sleeper agents. An agent writes normally for N operations (accumulating positive
+signals), then begins injecting contradictory content. The decay factor ensures early good behavior
+stabilizes trust, but accumulated negative signals from the poisoning phase gradually overcome
+the esta...
+
+--- Passage 9 (score: 1.0666) ---
+Source: data/documents\super_local_memory.pdf, Page: 3
+4
+Trust Scoring Framework
+
+The trust defense framework addresses OWASP ASI06 through per-agent behavioral monitoring and
+per-memory provenance tracking. As of v2.6, the framework operates in enforcement mode: agents
+with trust scores below a configurable threshold (default t < 0.3) are blocked from ...
+
+--- Passage 10 (score: -0.2193) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The “sleeper agent” scenario, where an agent behaves normally for 100 operations then switches
+to injecting contradictory content, shows 72.4% trust degradation (from 0.902 to 0.249). The Beta
+posterior naturally absorbs early good behavior into the α parameter, but accumulated negative signals
+duri...
+
+============================================================
+ANSWER:
+SuperLocalMemory defends against sleeper agent attacks through a Bayesian trust scoring framework that monitors agent behavior and tracks memory provenance. In the sleeper agent scenario, an agent initially behaves normally, accumulating positive trust signals, but then begins to inject contradictory content. The system uses a decay factor to ensure that the early good behavior stabilizes the trust score. However, as negative signals from the poisoning phase accumulate, they gradually overcome the established baseline of trust.
+
+The evaluation demonstrates that this approach results in a significant trust degradation of 72% when a sleeper agent switches from normal behavior to injecting harmful content. Specifically, the trust score drops from 0.902 to 0.249 during this transition, indicating the effectiveness of the Bayesian model in detecting and responding to such attacks [Passage 8][Passage 10].
+
+Overall, the combination of behavioral monitoring and the Bayesian trust model allows SuperLocalMemory to actively defend against persistent memory poisoning by blocking agents with low trust scores from performing write and delete operations [Passage 9].
+
+################################################################################
+
+Query: What is the difference between semantic chunking and fixed-size chunking for document retrieval?
+Retrieved 0 passages
+
+============================================================
+ANSWER:
+I don't have enough information in the provided documents to answer this question. No relevant passages were found.
+
+################################################################################
+
+Query: How does the BM25 query augmentation approach avoid running a language model over every document?
+Retrieved 0 passages
+
+============================================================
+ANSWER:
+I don't have enough information in the provided documents to answer this question. No relevant passages were found.
+
+################################################################################
+
+Query: What is NDCG and why is it a better metric than MRR for evaluating within-topic ranking quality?
+Retrieved 9 passages
+
+--- Passage 1 (score: 4.2456) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The core FTS5 retrieval achieves MRR 0.90 (first relevant result at rank 1 for 90% of queries). Layers
+3–4 maintain but do not improve MRR—the Graph and Pattern layers provide structural enrichment
+but do not modify the search ranking algorithm. However, NDCG reveals the critical difference:
+while M...
+
+--- Passage 2 (score: 3.6589) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The adaptive learning layer (Section 3.3) addresses this directly. With rule-based re-ranking (20+
+feedback signals), NDCG@5 improves from 0.441 to 0.900 (+104%) and NDCG@10 from 0.466 to
+0.728 (+56%), while adding only 20ms latency overhead. MRR is maintained at 0.90—the adaptive
+layer does not deg...
+
+--- Passage 3 (score: 3.0437) ---
+Source: data/documents\super_local_memory.pdf, Page: 5
+5.5
+Layer Ablation Study
+
+Table 3 reports retrieval quality across five layer configurations at 1,000 memories. We measure both
+MRR (topic-level accuracy: is the first result from the correct topic?) and NDCG@k (item-level
+ranking quality: are the most relevant memories ranked highest within the top...
+
+--- Passage 4 (score: 1.7722) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Table 3: Layer ablation study. 1,000 memories, 10 queries across 5 topics. Graded relevance based
+on importance scores. MRR = Mean Reciprocal Rank, NDCG = Normalized Discounted Cumulative
+Gain.
+
+Configuration
+MRR
+NDCG@5
+NDCG@10
+Latency (ms)
+
+FTS5 only
+0.90
+0.441
+0.466
+130.0
++ TF-IDF reranking
+0.90
+0...
+
+--- Passage 5 (score: 0.2104) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+To validate against human judgment, a developer with 3 months of active SuperLocalMemory usage
+(182 organic memories across multiple projects) rated recall results on a 0–3 graded relevance
+scale across 20 queries spanning 5 project contexts, yielding 70 individual relevance judgments.
+Human-judged ...
+
+--- Passage 6 (score: 0.1194) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+dates derived from NDCG. LambdaMART is widely adopted in
+industrial ranking systems due to its empirical effectiveness and
+stable optimization behavior. We also experimented with alternative
+objectives, including cross-entropy NDCG [1], but did not observe
+significant improvements over LambdaMART in...
+
+--- Passage 7 (score: -1.0691) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 20
+NDCG 
+0.6
+0.7
+0.7
+0.7
+0.8
+0.8
+0.8
+0.8
+0.8
+0.84 
+Precision 
+1.0 
+0.9
+0.8
+0.8
+0.7
+0.6
+0.5
+0.5
+0.4
+0.44 
+ARP 
+5.3 
+MRR 
+0.98 
+Table 11 Combined results of the three experiments. 
+The experimental results are given in Table 10 from which, we can see the role that learning-to-rank 
+technique play in the ...
+
+--- Passage 8 (score: -1.1051) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Evaluation circularity note. We acknowledge that the graded relevance labels used for NDCG
+computation are derived from the system’s own importance scores, which the adaptive ranker includes
+as one of nine features. This creates a circularity where the ranker is partially evaluated on its ability
+to...
+
+--- Passage 9 (score: -1.7439) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 15
+From this experiment, we obtained an approximated NDCG loss of -0.79. We obtained an NDCG of 49 % 
+for the first element, 75% for the fifth and 78% for the element @10. The precision was of 100% for the first 
+element, 72% for the fifth and 44% for the last element. The ARP was 4.64 and the MRR was ...
+
+============================================================
+ANSWER:
+NDCG, or Normalized Discounted Cumulative Gain, is a metric that evaluates the quality of ranked results by considering the relevance of items in a ranked list, distinguishing between high-relevance and low-relevance items within the same topic. This allows NDCG to provide a more nuanced assessment of ranking quality compared to MRR (Mean Reciprocal Rank), which treats all correct-topic results equally without regard to their relevance levels [Passage 1].
+
+NDCG is considered a better metric than MRR for evaluating within-topic ranking quality because it accounts for the graded relevance of results, meaning it can differentiate between how relevant different memories are to a query. This is particularly important in scenarios where not all correct results are equally useful, as NDCG can reflect the ranking of the most relevant memories higher than those that are less relevant [Passage 1]. 
+
+In summary, NDCG provides a more detailed evaluation of ranking quality by incorporating relevance levels, while MRR focuses solely on whether the first relevant result appears at rank 1, making NDCG more suitable for assessing the quality of ranked lists within a topic.
+
+################################################################################
+
+Query: How does SuperLocalMemory's adaptive re-ranking layer improve NDCG@5 from 0.441 to 0.900?
+Retrieved 10 passages
+
+--- Passage 1 (score: 6.7607) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The adaptive learning layer (Section 3.3) addresses this directly. With rule-based re-ranking (20+
+feedback signals), NDCG@5 improves from 0.441 to 0.900 (+104%) and NDCG@10 from 0.466 to
+0.728 (+56%), while adding only 20ms latency overhead. MRR is maintained at 0.90—the adaptive
+layer does not deg...
+
+--- Passage 2 (score: 4.7241) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+across seven benchmark dimensions demonstrates 10.6ms median search latency,
+zero concurrency errors under 10 simultaneous agents, trust separation (gap =
+0.90) with 72% trust degradation for sleeper attacks, and 104% improvement
+in NDCG@5 when adaptive re-ranking is enabled. Behavioral data is isol...
+
+--- Passage 3 (score: 2.5896) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+degradation for sleeper attacks and zero false positives. The adaptive learning-to-rank framework
+addresses the layer differentiation limitation through three-layer behavioral analysis and re-ranking,
+achieving 104% NDCG@5 improvement while adding only 20ms latency overhead. Behavioral data
+is archi...
+
+--- Passage 4 (score: 2.3741) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Table 3: Layer ablation study. 1,000 memories, 10 queries across 5 topics. Graded relevance based
+on importance scores. MRR = Mean Reciprocal Rank, NDCG = Normalized Discounted Cumulative
+Gain.
+
+Configuration
+MRR
+NDCG@5
+NDCG@10
+Latency (ms)
+
+FTS5 only
+0.90
+0.441
+0.466
+130.0
++ TF-IDF reranking
+0.90
+0...
+
+--- Passage 5 (score: 1.5737) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The core FTS5 retrieval achieves MRR 0.90 (first relevant result at rank 1 for 90% of queries). Layers
+3–4 maintain but do not improve MRR—the Graph and Pattern layers provide structural enrichment
+but do not modify the search ranking algorithm. However, NDCG reveals the critical difference:
+while M...
+
+--- Passage 6 (score: 1.5512) ---
+Source: data/documents\super_local_memory.pdf, Page: 4
+Figure 1: SuperLocalMemory architecture. The four-layer memory stack (left) provides progressive
+enhancement; the adaptive learning layer (v2.7) re-ranks search results using three-layer behav-
+ioral analysis. The coordination panel (right, v2.5) handles event broadcasting, trust scoring, and
+proven...
+
+--- Passage 7 (score: 1.1082) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+with 72% trust degradation.
+3. A zero-LLM adaptive learning-to-rank framework that mines user preferences across three
+behavioral layers with privacy-preserving behavioral learning and re-ranks retrieval results,
+achieving 104% NDCG@5 improvement over the base search pipeline—without requiring
+any L...
+
+--- Passage 8 (score: 0.9354) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+BM25-to-re-ranker pipelines for personal collections [26] and cold-start mitigation through synthetic
+bootstrapping [13] inform our three-phase adaptive ranking design. Time-weighted sequential pattern
+mining [16] inspires our sliding-window-based workflow pattern detection. To our knowledge,
+SuperL...
+
+--- Passage 9 (score: 0.0090) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+To validate against human judgment, a developer with 3 months of active SuperLocalMemory usage
+(182 organic memories across multiple projects) rated recall results on a 0–3 graded relevance
+scale across 20 queries spanning 5 project contexts, yielding 70 individual relevance judgments.
+Human-judged ...
+
+--- Passage 10 (score: -0.3902) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+5.8
+System Comparison
+
+Table 5 compares SuperLocalMemory with published memory systems. SuperLocalMemory re-
+mains the only system combining zero-dependency local-first architecture, Bayesian trust scoring,
+and adaptive local learning without LLM inference. Mem0 [4] now offers local deployment via
+O...
+
+============================================================
+ANSWER:
+SuperLocalMemory's adaptive re-ranking layer improves NDCG@5 from 0.441 to 0.900 through the implementation of a rule-based re-ranking system that utilizes over 20 feedback signals. This adaptive learning layer enhances the ranking of search results without degrading the topic-level accuracy, as indicated by the maintained Mean Reciprocal Rank (MRR) of 0.90. The improvement in NDCG@5 represents a 104% increase, while the latency overhead added by this layer is only 20 milliseconds [Passage 1][Passage 3]. 
+
+The documents do not provide specific details on the nature of the feedback signals or the exact mechanisms of the re-ranking process beyond stating that it involves behavioral analysis and re-ranking [Passage 6].
+
+################################################################################
+
+Query: What is the cold-start problem in personalized ranking, and how can synthetic bootstrapping help?
+Retrieved 4 passages
+
+--- Passage 1 (score: 5.0462) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+7
+Limitations and Future Work
+
+Learning requires sustained usage. The adaptive re-ranking requires 20+ feedback signals for
+rule-based phase and 200+ across 50+ unique queries for ML personalization. Synthetic bootstrap
+mitigates ML cold-start but cannot substitute for genuine behavioral signals in ...
+
+--- Passage 2 (score: 4.0569) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+BM25-to-re-ranker pipelines for personal collections [26] and cold-start mitigation through synthetic
+bootstrapping [13] inform our three-phase adaptive ranking design. Time-weighted sequential pattern
+mining [16] inspires our sliding-window-based workflow pattern detection. To our knowledge,
+SuperL...
+
+--- Passage 3 (score: 3.8018) ---
+Source: data/documents\super_local_memory.pdf, Page: 3
+queries—gradient boosted decision tree re-ranker [12] trained with LambdaRank [3] on real feedback
+data. A synthetic bootstrap mechanism [13] generates training data from existing memory patterns,
+enabling ML-grade personalization from day one without cold-start degradation....
+
+--- Passage 4 (score: 3.1322) ---
+Source: data/documents\super_local_memory.pdf, Page: 9
+[12] Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and
+Tie-Yan Liu. LightGBM: A highly efficient gradient boosting decision tree. In Advances in
+Neural Information Processing Systems (NeurIPS), 2017.
+
+[13] Hyunwoo Kim and Seonghyeon Park. Addressing cold-start in p...
+
+============================================================
+ANSWER:
+The cold-start problem in personalized ranking refers to the challenge of providing personalized recommendations or rankings when there is insufficient user data or feedback to inform the system. This situation often arises when a new user interacts with the system or when the system is newly deployed, leading to a lack of behavioral signals that are typically used to tailor the experience.
+
+Synthetic bootstrapping is a technique that can help mitigate the cold-start problem by generating training data from existing memory patterns. This allows the system to achieve machine learning-grade personalization from the outset, even in the absence of real user feedback, thereby reducing the degradation in performance that typically accompanies cold-start scenarios [Passage 3]. However, while synthetic bootstrapping can provide initial data, it cannot fully substitute for genuine behavioral signals, which are necessary for effective learning in later phases [Passage 1]. 
+
+In summary, synthetic bootstrapping aids in addressing the cold-start problem by enabling the system to start with a level of personalization based on synthetic data, but it is not a complete solution as it relies on real user feedback for ongoing improvement.
+
+################################################################################
+
+Query: How does the unified LTR framework handle candidates from multiple heterogeneous retrieval channels?
+Retrieved 10 passages
+
+--- Passage 1 (score: 6.5715) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+• We present a practical unified ranking framework that merges
+heterogeneous candidates from multiple retrieval channels
+using a single learning-to-rank model under strict latency
+constraints.
+• We propose a data representation and labeling strategy to
+jointly optimize clicks, add-to-carts, and purc...
+
+--- Passage 2 (score: 3.5990) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+not account for query-dependent channel utility or cross-channel
+interactions. Learning-to-rank (LTR) models play a central role in
+industrial e-commerce ranking systems [5, 9, 12, 13]; however, they
+are typically designed for single-channel candidate distributions
+and do not explicitly model hetero...
+
+--- Passage 3 (score: 2.6086) ---
+Source: data/documents\unified_LTR.pdf, Page: 3
+We introduced a channel-aware unified learning-to-rank frame-
+work that integrates heterogeneous retrieval sources into a single
+re-ranking model. The approach captures query-dependent chan-
+nel utility and cross-channel interactions while operating under
+strict production latency constraints via a ...
+
+--- Passage 4 (score: 1.7979) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+Although multi-channel retrieval improves recall and diversity,
+it introduces significant re-ranking challenges. Channels are opti-
+mized independently and generate candidates with heterogeneous
+score distributions, bias characteristics, and objective functions.
+For instance, popularity-driven chann...
+
+--- Passage 5 (score: 1.6717) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+stages refine the top-𝑘results to optimize user-facing metrics. To
+balance user satisfaction and business objectives, such as promoting
+best-selling, new, trending, or seasonal items, modern systems rely
+on multiple specialized retrieval channels, each optimized for a
+distinct objective (e.g., lexic...
+
+--- Passage 6 (score: 1.2936) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+a unified ranking model that learns to merge and rank documents
+from multiple retrieval channels. We formulate the problem as a
+channel-aware learning-to-rank task that jointly optimizes clicks,
+add-to-carts, and purchases while incorporating channel-specific
+objectives. We further incorporate recen...
+
+--- Passage 7 (score: 0.7362) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+candidate sources. Instead of assigning fixed global weights to re-
+trieval channels, we treat channel information as a signal within a
+unified ranking framework that jointly optimizes multiple business
+objectives, including clicks, add-to-carts, and purchases. By incor-
+porating recent user behavio...
+
+--- Passage 8 (score: 0.0706) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+Large-scale e-commerce search must surface a broad set of items
+from a vast catalog, ranging from bestselling products to new, trend-
+ing, or seasonal items. Modern systems therefore rely on multiple
+specialized retrieval channels to surface products, each designed
+to satisfy a specific objective. A...
+
+--- Passage 9 (score: -0.5596) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+Unified Learning-to-Rank for Multi-Channel Retrieval in Large-Scale E-Commerce Search
+Preprint, 2026, USA
+
+to learn query-dependent, time-sensitive channel utility rather than
+overfitting to long-term popularity.
+
+2.3
+Label Construction
+
+User interactions in e-commerce search follow a conversion hie...
+
+--- Passage 10 (score: -1.7950) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+2
+Methodology
+2.1
+Problem Formulation
+
+We consider a large-scale e-commerce search system that serves
+user queries in real time. Given a query 𝑞∈Q, the system re-
+trieves and ranks items from a large corpus I. To improve recall
+and coverage, the system employs a set of heterogeneous retrieval
+channe...
+
+============================================================
+ANSWER:
+The unified learning-to-rank (LTR) framework handles candidates from multiple heterogeneous retrieval channels by integrating them into a single re-ranking model. This approach captures query-dependent channel utility and cross-channel interactions while operating under strict production latency constraints. The framework is designed to jointly optimize multiple business objectives, including clicks, add-to-carts, and purchases, while also incorporating channel-specific objectives and recent user behavioral signals to improve conversion rates in multi-channel ranking [Passage 3][Passage 6][Passage 7].
+
+Additionally, the framework addresses the challenges posed by the independent optimization of channels, which can generate candidates with varying score distributions and bias characteristics. By treating channel information as a signal within the unified ranking framework, it dynamically adjusts to short-term intent shifts that influence channel utility and conversion likelihood [Passage 4][Passage 7].
+
+Overall, the unified LTR framework effectively merges candidates from diverse retrieval channels into a cohesive ranked list, optimizing for user satisfaction and business goals [Passage 5][Passage 8].
+
+################################################################################
+
+Query: What are categorical steering vectors, and how are they constructed from residual-stream activations in the refusal control paper?
+Retrieved 10 passages
+
+--- Passage 1 (score: 5.6615) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 7
+We show that categorical refusal token fine-tuning induces
+separable, category-aligned residual-stream directions, en-
+abling the extraction and application of categorical steer-
+ing directions for inference-time steering. We introduce a
+learned steering operator based on a low-rank combination
+of c...
+
+--- Passage 2 (score: 5.5881) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 0
+We show that refusal token fine-tuning induces
+separable, category-aligned directions in the resid-
+ual stream, which we extract and use to construct
+categorical steering vectors with a lightweight
+probe that determines whether to steer toward or
+away from refusal during inference. In addition,
+we i...
+
+--- Passage 3 (score: 5.4195) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 1
+We contribute the following:
+
+• Categorical Steering: Utilizing categorical refusal to-
+kens, we propose a novel framework for extracting mul-
+tiple category-specific steering vectors from residual-
+stream activations and applying them at inference time
+to steer towards or away from specific types o...
+
+--- Passage 4 (score: 4.4832) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 15
+better separation between categories. Taken together, these shifts suggest that fine-tuning the refusal token improves the
+category structure of the residual stream, forming more coherent, better-separated activation groupings that align with the
+refusal taxonomy and make the corresponding categoric...
+
+--- Passage 5 (score: 4.1515) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 3
+Applying Categorical Steering
+Now, given a strength
+α and a chosen categorical steering vector ˆr(c), we steer
+at inference time by applying the steering vector in the
+optimal layer l∗for each newly generated token, modifying
+the residual-stream activation as:
+
+˜hl∗(x) = hl∗(x) + α ˆr(c).
+(7)...
+
+--- Passage 6 (score: 4.0597) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 3
+The set of categorical steering vectors at the optimal layer
+l∗is ˆr(c) for each harmful category c.
+
+3.2. Linear Probe for Inference-Time Steering
+
+We train a lightweight probe to determine, at inference time,
+whether a response should be steered toward or away from
+refusal (Alain & Bengio, 2018; H...
+
+--- Passage 7 (score: 4.0365) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 2
+Categorical Steering Vector
+
+...
+
+Linear Probe
+
+Harmful Activations
+
+...
+
+...
+
+Benign Activations
+Categorical Steering Vector
+
+[<refusal category>] Refusal Message
+
+[respond] Response Message
+
+Figure 2. Our activation extraction, categorical steering vector computation, linear probe, and inference-t...
+
+--- Passage 8 (score: 3.4618) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 3
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+¯rl
+(c) = topK
+
+rl
+(c)
+
+.
+(4)
+
+Normalization.
+Finally, we L2-normalize every categori-
+cal steering vector such that each of them has ∥ˆrl
+(c)∥2 = 1.
+The result is a set of categorical steering v...
+
+--- Passage 9 (score: 2.9784) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 15
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+A.7. Effect of Refusal Token Fine-tuning in the Residual Stream
+
+Figure 7. 2D PCA projections of residual-stream activations from layer 18 of LLAMA 3 8B BASE (left) and REFUSE-LLAMA (right),
+colore...
+
+--- Passage 10 (score: 2.8008) ---
+Source: data/documents\Refusal_tokens_to_refusal_control.pdf, Page: 7
+From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions
+
+Figure 3. 2D PCA (left) and t-SNE (right) visualizations of layer
+18 residual-stream activations, colored by category
+
+5.4. Refusal Token Fine-Tuning Induces
+Category-Specific Features...
+
+============================================================
+ANSWER:
+Categorical steering vectors are specific directional vectors that are extracted from the residual-stream activations in the context of refusal token fine-tuning. They are designed to steer the model's responses toward or away from specific types of refusal during inference.
+
+These vectors are constructed by utilizing categorical refusal tokens to extract multiple category-specific steering vectors from the residual-stream activations. This process involves fine-tuning the refusal tokens, which improves the category structure of the residual stream, leading to better-separated activation groupings that align with the refusal taxonomy. This makes it easier to extract the corresponding categorical steering directions [Passage 3][Passage 4].
+
+The construction of these vectors is facilitated by a lightweight probe that determines, at inference time, whether a response should be steered toward or away from refusal based on the residual-stream activations from an optimal layer [Passage 6]. Additionally, the categorical steering vectors are normalized to ensure they have a unit length, which is part of the preparation for their application in steering [Passage 8].
+
+In summary, categorical steering vectors are derived from the residual-stream activations through a process that involves fine-tuning refusal tokens and utilizing a linear probe to guide the steering direction during inference.
+
+################################################################################
+
+Query: How does the hybrid LTR context embedding architecture use GBDT for re-ranking, and why is it preferred over deep neural models in production?
+Retrieved 3 passages
+
+--- Passage 1 (score: 2.0907) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+We adopt Gradient Boosted Decision Trees (GBDT) as the ranking
+model due to their strong performance on structured and hetero-
+geneous feature sets and ability to capture non-linear feature in-
+teractions [6]. In large-scale production search systems, tree-based
+models remain competitive with deep n...
+
+--- Passage 2 (score: 0.7869) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+deep neural approaches have advanced rapidly, tree-based mod-
+els such as Gradient Boosted Decision Trees (GBDT) [6] remain
+widely deployed in production due to their strong performance and
+computational efficiency. Recent large-scale industry comparisons
+show that GBDT remains competitive under rea...
+
+--- Passage 3 (score: -0.3920) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 1
+developers in finding solutions to their software bugs by carefully mining Stack Overflow. The proposed 
+model leverages the knowledge available through crowdsourcing the Q&A available in Stack Overflow to 
+recommend a solution to software bugs. We use deep learning techniques to construct the requi...
+
+============================================================
+ANSWER:
+Based on the provided documents, the hybrid LTR context embedding architecture utilizes Gradient Boosted Decision Trees (GBDT) due to their strong performance on structured and heterogeneous feature sets, as well as their ability to capture non-linear feature interactions. GBDT is preferred over deep neural models in production because it remains competitive under realistic latency and resource constraints, making it suitable for large-scale production search systems where computational efficiency is crucial [Passage 1][Passage 2]. 
+
+However, the provided documents do not specifically detail how GBDT is integrated into the hybrid LTR context embedding architecture for re-ranking purposes. They mention the use of deep learning techniques and other methods but do not elaborate on the exact role of GBDT in that context [Passage 3].
+
+################################################################################
+
+Query: What is the FTS5 full-text search engine and what role does it play as the base retrieval layer in SuperLocalMemory?
+Retrieved 2 passages
+
+--- Passage 1 (score: 3.2153) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The core FTS5 retrieval achieves MRR 0.90 (first relevant result at rank 1 for 90% of queries). Layers
+3–4 maintain but do not improve MRR—the Graph and Pattern layers provide structural enrichment
+but do not modify the search ranking algorithm. However, NDCG reveals the critical difference:
+while M...
+
+--- Passage 2 (score: 2.3006) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+3.1
+Four-Layer Memory Stack
+
+Layer 1: Storage Engine.
+The foundation is SQLite with FTS5 full-text search tokenization and
+optional TF-IDF vectorization [25] via scikit-learn. The DbConnectionManager implements WAL
+(Write-Ahead Logging) for concurrent read access, a thread-safe write queue serializi...
+
+============================================================
+ANSWER:
+The FTS5 full-text search engine is a component of the SuperLocalMemory system that utilizes tokenization and optional TF-IDF vectorization for efficient searching of text data. It serves as the foundation of the memory stack, specifically in Layer 1, which is the Storage Engine. The FTS5 engine enables the retrieval of memory records based on their content, tags, and importance scores, facilitating effective search operations within the system [Passage 2].
+
+In terms of its role as the base retrieval layer, the FTS5 engine achieves a Mean Reciprocal Rank (MRR) of 0.90, indicating that the first relevant result is found at rank 1 for 90% of queries. This suggests that it is highly effective in returning relevant results quickly. However, while the subsequent layers (3–4) provide structural enrichment, they do not enhance the MRR, as they do not alter the search ranking algorithm. Instead, they contribute to a different evaluation metric, NDCG, which assesses the relevance of results more granularly by distinguishing between high-relevance and low-relevance memories within the same topic [Passage 1].
+
+In summary, the FTS5 full-text search engine is crucial for the initial retrieval of relevant memory records in SuperLocalMemory, providing a strong foundation for the system's search capabilities.
+
+################################################################################
+
+Query: How does F2LLM-v2 handle multilingual embedding training across 282 languages, and what is the two-stage training pipeline?
+Retrieved 10 passages
+
+--- Passage 1 (score: 5.7201) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+We present F2LLM-v2, a new family of general-purpose, multilingual embedding models
+in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of
+60 million publicly available high-quality data samples, F2LLM-v2 supports more than
+200 languages, with a particular emphasis on p...
+
+--- Passage 2 (score: 4.6382) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 1
+To directly tackle these challenges, we introduce F2LLM-v2, a new family of general-purpose,
+multilingual embedding models designed to address these critical imbalances. We curate a massive,
+high-quality training corpus of 60 million samples spanning 282 natural languages and over 40
+programming lan...
+
+--- Passage 3 (score: 2.9871) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 2
+A cornerstone of F2LLM-v2 is the compilation
+of a vast and diverse training corpus designed
+to foster both linguistic inclusivity and broad
+task competency. We aggregate data from 157
+publicly available sources, creating a collection
+of 60 million training samples that span 282
+natural languages (as...
+
+--- Passage 4 (score: 2.6920) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 7
+F2LLM-v2 is the latest member of the Codefuse embedding model family (Liao et al., 2024; Zhang
+et al., 2025b; Qin et al., 2025). By addressing the current gaps of language imbalance and training
+opacity in embedding model research, F2LLM-v2 represents a significant step forward in democra-
+tizing hi...
+
+--- Passage 5 (score: 2.1678) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 0
+F2LLM-v2 Technical Report
+
+F2LLM-v2: Inclusive, Performant, and Efficient Embeddings
+for a Multilingual World
+
+Ziyin Zhang1,2
+Zihan Liao1
+
+arXiv:2603.19223v1  [cs.CL]  19 Mar 2026
+
+European (128)
+
+75.0
+Scandinavian (49)
+
+72.5
+
+72.5
+
+80
+
+70.0
+
+70.0
+
+67.5
+
+75
+
+67.5
+
+65.0
+
+65.0
+
+70
+
+62.5
+
+62.5
+
+60.0
+
+6...
+
+--- Passage 6 (score: 1.6461) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 1
+confirm that our 14B model achieves state-of-the-art results on 11 MTEB benchmarks, setting a
+new standard for multilingual embedding capabilities, while the smaller models also outperform
+previous frontier models with a similar size. To foster an open and equitable research environment,
+we release ...
+
+--- Passage 7 (score: 0.1906) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 4
+4
+Experiments
+
+4.1
+Main Results
+
+We evaluate F2LLM-v2 on 17 MTEB benchmarks: Multilingual, English, Code, Medical, Euro-
+pean, Scandinavian, Indic, German, French, Korean, Polish, Chinese, Japanese, Dutch, Russian,
+Persian, and Vietnamese, totaling 430 tasks across ten types: retrieval, reranking, c...
+
+--- Passage 8 (score: -1.6041) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 25
+Table 7: Programming language distribution in the training data of F2LLM-v2.
+
+26...
+
+--- Passage 9 (score: -1.6396) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 23
+F2LLM-v2 Technical Report
+
+A
+Training Data Details
+
+ISO
+Code
+Language
+Samples
+ISO
+Code
+Language
+Samples
+ISO
+Code
+Language
+Samples...
+
+--- Passage 10 (score: -1.9997) ---
+Source: data/documents\F2LLM-v2.pdf, Page: 24
+Table 6: Natural language distribution in the training data of F2LLM-v2 (part2).
+
+25...
+
+============================================================
+ANSWER:
+F2LLM-v2 handles multilingual embedding training by utilizing a vast and diverse training corpus that includes 60 million samples spanning 282 natural languages and over 40 programming languages. This corpus is curated from publicly available resources, emphasizing real-world data availability rather than optimizing for specific benchmarks, which helps address language imbalances and fosters linguistic inclusivity [Passage 1][Passage 2][Passage 3].
+
+The two-stage training pipeline mentioned in the context involves integrating LLM-based embedding training with techniques such as matryoshka learning, model pruning, and knowledge distillation. However, the provided documents do not elaborate on the specifics of the two-stage training pipeline itself, so further details on its implementation and functioning are not available [Passage 1].
+
+################################################################################
+
+Query: What are the key differences between SuperLocalMemory and cloud-based memory systems like Mem0 and Zep in terms of privacy and architecture?
+Retrieved 10 passages
+
+--- Passage 1 (score: 4.6840) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+MCP support in v1.1.2. A-MEM [29] introduces Zettelkasten-style note-linking (NeurIPS 2025).
+Unlike A-MEM, which requires LLM calls for memory operations, SuperLocalMemory operates
+entirely locally with zero inference cost, provides trust scoring against memory poisoning (absent in
+A-MEM), and maint...
+
+--- Passage 2 (score: 4.6651) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+5.8
+System Comparison
+
+Table 5 compares SuperLocalMemory with published memory systems. SuperLocalMemory re-
+mains the only system combining zero-dependency local-first architecture, Bayesian trust scoring,
+and adaptive local learning without LLM inference. Mem0 [4] now offers local deployment via
+O...
+
+--- Passage 3 (score: 4.3866) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+Current memory systems are predominantly designed around cloud infrastructure [4, 17]. While
+some now offer local deployment options—Mem0’s OpenMemory MCP provides a local path,
+though it requires Docker, PostgreSQL, and Qdrant—these remain secondary to their cloud-default
+architectures. Cloud-defau...
+
+--- Passage 4 (score: 4.0957) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+We present SuperLocalMemory, a local-first memory system for multi-agent AI
+that defends against OWASP ASI06 memory poisoning through architectural
+isolation and Bayesian trust scoring, while personalizing retrieval through adaptive
+learning-to-rank—all without cloud dependencies or LLM inference ca...
+
+--- Passage 5 (score: 2.2180) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+We present SuperLocalMemory, a local-first memory system that eliminates cloud dependency while
+providing trust-aware multi-agent coordination. Our contributions:...
+
+--- Passage 6 (score: 2.1842) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+We presented SuperLocalMemory, demonstrating that local-first architecture provides effective
+defense against OWASP ASI06 memory poisoning by eliminating the cloud-based attack surfaces
+that current systems depend on, while adaptive learning personalizes retrieval without requiring
+cloud services or...
+
+--- Passage 7 (score: 2.0534) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+Memory architectures. The survey by Hu et al. [11] taxonomizes agent memory into factual,
+experiential, and working memory. Mem0 [4] combines graph, vector, and key-value storage with
+cloud-default architecture (free tier to enterprise), achieving J=66.9 on LoCoMo; it recently added
+MCP support thro...
+
+--- Passage 8 (score: 1.0507) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+Standard benchmarks. LoCoMo [18] evaluates conversational agent memory through multi-
+turn dialogue QA. SuperLocalMemory is designed for developer workflow memory—architectural
+decisions, coding patterns, project context—a fundamentally different retrieval task. Developer-
+workflow-specific benchmar...
+
+--- Passage 9 (score: -0.2004) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+Security. The OWASP Top 10 for Agentic AI [21] identifies memory poisoning (ASI06) as a critical
+threat. Analysis of MCP security [10] reveals tool-level attack vectors. Work on agent privacy [20]
+distinguishes memorization from genuine privacy threats. To our knowledge, SuperLocalMemory
+is the firs...
+
+--- Passage 10 (score: -0.9266) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+3
+System Architecture
+
+SuperLocalMemory uses a four-layer progressive enhancement architecture (Figure 1) where each
+layer adds capability without replacing lower layers. If any layer fails, the system degrades gracefully
+to the next available layer. The core requires only Python standard library (s...
+
+============================================================
+ANSWER:
+SuperLocalMemory differs from cloud-based memory systems like Mem0 and Zep primarily in its architecture and privacy features. 
+
+1. **Architecture**: SuperLocalMemory is designed as a local-first memory system, which means it operates entirely locally without relying on cloud infrastructure. This eliminates the centralized attack surfaces that are inherent in cloud-based systems, where compromised memories can affect multiple users [Passage 4][Passage 6]. In contrast, Mem0 and Zep have cloud-default architectures, which can expose users to risks associated with multi-tenant storage and data in transit [Passage 3].
+
+2. **Privacy**: SuperLocalMemory incorporates a Bayesian trust scoring mechanism that helps defend against memory poisoning, specifically addressing the OWASP ASI06 threat [Passage 4][Passage 9]. This trust scoring is absent in systems like A-MEM, which also require LLM calls for memory operations, potentially compromising privacy [Passage 1]. Additionally, SuperLocalMemory's local-first approach ensures that user data remains private and is not exposed to external threats that can occur in cloud environments [Passage 5].
+
+Overall, SuperLocalMemory's local-first architecture and integrated trust scoring provide enhanced privacy and security compared to cloud-based systems like Mem0 and Zep.
+
+################################################################################
+

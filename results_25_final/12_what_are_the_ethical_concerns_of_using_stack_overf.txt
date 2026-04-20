@@ -1,0 +1,35 @@
+Query: What are the ethical concerns of using Stack Overflow data for training ML models?
+Retrieved 5 passages
+
+--- Passage 1 (score: 0.9629) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 4
+experiment using data from Stack Overflow to train a binary classifier. Then, they tested a classifier on a 
+dataset retrieved from the legacy document using support forum. The findings showed that their model 
+could find best answers with a good accuracy when all features are enabled e.g. answer up...
+
+--- Passage 2 (score: -0.0425) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 4
+model can be used to aid developers in browsing Stack Overflow discussions or researchers in building 
+recommenders based on Stack Overflow....
+
+--- Passage 3 (score: -0.5156) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 1
+developers in finding solutions to their software bugs by carefully mining Stack Overflow. The proposed 
+model leverages the knowledge available through crowdsourcing the Q&A available in Stack Overflow to 
+recommend a solution to software bugs. We use deep learning techniques to construct the requi...
+
+--- Passage 4 (score: -0.6332) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+Stack overflow is a public platform with a large collection and knowledge base for computer scientists, 
+developers and programmers and is crow sourced. However, extracting and finding the right information 
+for a specific problem can be challenging. Hence, using data mining to develop a tool to hel...
+
+--- Passage 5 (score: -1.5734) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 4
+Beyer et al., [11] aim to automate the classification of Stack Overflow posts into seven question categories. 
+As a first step, they have manually created a curated data set of 500 Stack Overflow posts, classified into 
+the seven categories. Using this dataset, they applied machine learning algorith...
+
+============================================================
+ANSWER:
+I don't have enough information in the provided documents to answer this question.

@@ -1,0 +1,18 @@
+Query: tell me about lambdamart. What is it and how does it work?
+Retrieved 1 passages
+
+--- Passage 1 (score: 2.6356) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+dates derived from NDCG. LambdaMART is widely adopted in
+industrial ranking systems due to its empirical effectiveness and
+stable optimization behavior. We also experimented with alternative
+objectives, including cross-entropy NDCG [1], but did not observe
+significant improvements over LambdaMART in...
+
+============================================================
+ANSWER:
+LambdaMART is a ranking algorithm that is widely adopted in industrial ranking systems due to its empirical effectiveness and stable optimization behavior. It is based on the principles of gradient boosting and is designed to optimize ranking metrics, specifically those derived from Normalized Discounted Cumulative Gain (NDCG) [Passage 1]. 
+
+The algorithm works by using a local tree growing strategy to effectively model heterogeneous retrieval signals and behavioral features, although the provided passage does not go into detail about the specific mechanics of how LambdaMART operates or its internal workings. 
+
+However, the documents do not discuss the theoretical foundations of LambdaMART or provide a comprehensive explanation of its implementation and performance characteristics beyond its effectiveness and optimization behavior.

@@ -1,0 +1,101 @@
+Query: How does the unified LTR framework handle candidates from multiple heterogeneous retrieval channels?
+Retrieved 10 passages
+
+--- Passage 1 (score: 6.5715) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+• We present a practical unified ranking framework that merges
+heterogeneous candidates from multiple retrieval channels
+using a single learning-to-rank model under strict latency
+constraints.
+• We propose a data representation and labeling strategy to
+jointly optimize clicks, add-to-carts, and purc...
+
+--- Passage 2 (score: 3.5990) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+not account for query-dependent channel utility or cross-channel
+interactions. Learning-to-rank (LTR) models play a central role in
+industrial e-commerce ranking systems [5, 9, 12, 13]; however, they
+are typically designed for single-channel candidate distributions
+and do not explicitly model hetero...
+
+--- Passage 3 (score: 2.6086) ---
+Source: data/documents\unified_LTR.pdf, Page: 3
+We introduced a channel-aware unified learning-to-rank frame-
+work that integrates heterogeneous retrieval sources into a single
+re-ranking model. The approach captures query-dependent chan-
+nel utility and cross-channel interactions while operating under
+strict production latency constraints via a ...
+
+--- Passage 4 (score: 1.7979) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+Although multi-channel retrieval improves recall and diversity,
+it introduces significant re-ranking challenges. Channels are opti-
+mized independently and generate candidates with heterogeneous
+score distributions, bias characteristics, and objective functions.
+For instance, popularity-driven chann...
+
+--- Passage 5 (score: 1.6717) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+stages refine the top-𝑘results to optimize user-facing metrics. To
+balance user satisfaction and business objectives, such as promoting
+best-selling, new, trending, or seasonal items, modern systems rely
+on multiple specialized retrieval channels, each optimized for a
+distinct objective (e.g., lexic...
+
+--- Passage 6 (score: 1.2936) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+a unified ranking model that learns to merge and rank documents
+from multiple retrieval channels. We formulate the problem as a
+channel-aware learning-to-rank task that jointly optimizes clicks,
+add-to-carts, and purchases while incorporating channel-specific
+objectives. We further incorporate recen...
+
+--- Passage 7 (score: 0.7362) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+candidate sources. Instead of assigning fixed global weights to re-
+trieval channels, we treat channel information as a signal within a
+unified ranking framework that jointly optimizes multiple business
+objectives, including clicks, add-to-carts, and purchases. By incor-
+porating recent user behavio...
+
+--- Passage 8 (score: 0.0706) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+Large-scale e-commerce search must surface a broad set of items
+from a vast catalog, ranging from bestselling products to new, trend-
+ing, or seasonal items. Modern systems therefore rely on multiple
+specialized retrieval channels to surface products, each designed
+to satisfy a specific objective. A...
+
+--- Passage 9 (score: -0.5596) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+Unified Learning-to-Rank for Multi-Channel Retrieval in Large-Scale E-Commerce Search
+Preprint, 2026, USA
+
+to learn query-dependent, time-sensitive channel utility rather than
+overfitting to long-term popularity.
+
+2.3
+Label Construction
+
+User interactions in e-commerce search follow a conversion hie...
+
+--- Passage 10 (score: -1.7950) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+2
+Methodology
+2.1
+Problem Formulation
+
+We consider a large-scale e-commerce search system that serves
+user queries in real time. Given a query 𝑞∈Q, the system re-
+trieves and ranks items from a large corpus I. To improve recall
+and coverage, the system employs a set of heterogeneous retrieval
+channe...
+
+============================================================
+ANSWER:
+The unified learning-to-rank (LTR) framework handles candidates from multiple heterogeneous retrieval channels by integrating them into a single re-ranking model. This approach captures query-dependent channel utility and cross-channel interactions while operating under strict production latency constraints. The framework is designed to jointly optimize multiple business objectives, including clicks, add-to-carts, and purchases, while also incorporating channel-specific objectives and recent user behavioral signals to improve conversion rates in multi-channel ranking [Passage 3][Passage 6][Passage 7].
+
+Additionally, the framework addresses the challenges posed by the independent optimization of channels, which can generate candidates with varying score distributions and bias characteristics. By treating channel information as a signal within the unified ranking framework, it dynamically adjusts to short-term intent shifts that influence channel utility and conversion likelihood [Passage 4][Passage 7].
+
+Overall, the unified LTR framework effectively merges candidates from diverse retrieval channels into a cohesive ranked list, optimizing for user satisfaction and business goals [Passage 5][Passage 8].

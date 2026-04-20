@@ -1,0 +1,103 @@
+Query: How does SuperLocalMemory defend against sleeper agent attacks using Bayesian trust scoring?
+Retrieved 10 passages
+
+--- Passage 1 (score: 6.1686) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+We present SuperLocalMemory, a local-first memory system for multi-agent AI
+that defends against OWASP ASI06 memory poisoning through architectural
+isolation and Bayesian trust scoring, while personalizing retrieval through adaptive
+learning-to-rank—all without cloud dependencies or LLM inference ca...
+
+--- Passage 2 (score: 4.6372) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+We presented SuperLocalMemory, demonstrating that local-first architecture provides effective
+defense against OWASP ASI06 memory poisoning by eliminating the cloud-based attack surfaces
+that current systems depend on, while adaptive learning personalizes retrieval without requiring
+cloud services or...
+
+--- Passage 3 (score: 2.4460) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+SuperLocalMemory: Privacy-Preserving Multi-Agent
+Memory with
+Bayesian Trust Defense Against Memory Poisoning
+
+Varun Pratap Bhardwaj
+Independent Research
+varun.pratap.bhardwaj@gmail.com
+
+arXiv:2603.02240v1  [cs.AI]  17 Feb 2026
+
+Abstract...
+
+--- Passage 4 (score: 2.4410) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+across seven benchmark dimensions demonstrates 10.6ms median search latency,
+zero concurrency errors under 10 simultaneous agents, trust separation (gap =
+0.90) with 72% trust degradation for sleeper attacks, and 104% improvement
+in NDCG@5 when adaptive re-ranking is enabled. Behavioral data is isol...
+
+--- Passage 5 (score: 2.4177) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+Security. The OWASP Top 10 for Agentic AI [21] identifies memory poisoning (ASI06) as a critical
+threat. Analysis of MCP security [10] reveals tool-level attack vectors. Work on agent privacy [20]
+distinguishes memorization from genuine privacy threats. To our knowledge, SuperLocalMemory
+is the firs...
+
+--- Passage 6 (score: 2.4170) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+1. A local-first, trust-defended memory architecture combining four progressive layers (stor-
+age, hierarchy, graph, patterns) with per-memory provenance tracking and event-driven
+coordination, achieving 10.6ms median search latency on commodity hardware with 1.4KB
+per-memory storage efficiency.
+2. ...
+
+--- Passage 7 (score: 1.5815) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Table 4: Bayesian trust scoring under adversarial scenarios. Beta(2,1) prior. 200 operations per agent,
+10 agents per scenario. Trust = posterior mean α/(α + β).
+
+Scenario
+Benign Trust
+Malicious Trust
+Gap
+
+Benign baseline (10 agents)
+0.945
+—
+0.000
+Single poisoner (9 benign + 1)
+0.946
+0.048
+0.898
+Sle...
+
+--- Passage 8 (score: 1.4558) ---
+Source: data/documents\super_local_memory.pdf, Page: 4
+Defense against sleeper agents. An agent writes normally for N operations (accumulating positive
+signals), then begins injecting contradictory content. The decay factor ensures early good behavior
+stabilizes trust, but accumulated negative signals from the poisoning phase gradually overcome
+the esta...
+
+--- Passage 9 (score: 1.0666) ---
+Source: data/documents\super_local_memory.pdf, Page: 3
+4
+Trust Scoring Framework
+
+The trust defense framework addresses OWASP ASI06 through per-agent behavioral monitoring and
+per-memory provenance tracking. As of v2.6, the framework operates in enforcement mode: agents
+with trust scores below a configurable threshold (default t < 0.3) are blocked from ...
+
+--- Passage 10 (score: -0.2193) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The “sleeper agent” scenario, where an agent behaves normally for 100 operations then switches
+to injecting contradictory content, shows 72.4% trust degradation (from 0.902 to 0.249). The Beta
+posterior naturally absorbs early good behavior into the α parameter, but accumulated negative signals
+duri...
+
+============================================================
+ANSWER:
+SuperLocalMemory defends against sleeper agent attacks through a Bayesian trust scoring framework that monitors agent behavior and tracks memory provenance. In the sleeper agent scenario, an agent initially behaves normally, accumulating positive trust signals, but then begins to inject contradictory content. The system uses a decay factor to ensure that the early good behavior stabilizes the trust score. However, as negative signals from the poisoning phase accumulate, they gradually overcome the established baseline of trust.
+
+The evaluation demonstrates that this approach results in a significant trust degradation of 72% when a sleeper agent switches from normal behavior to injecting harmful content. Specifically, the trust score drops from 0.902 to 0.249 during this transition, indicating the effectiveness of the Bayesian model in detecting and responding to such attacks [Passage 8][Passage 10].
+
+Overall, the combination of behavioral monitoring and the Bayesian trust model allows SuperLocalMemory to actively defend against persistent memory poisoning by blocking agents with low trust scores from performing write and delete operations [Passage 9].

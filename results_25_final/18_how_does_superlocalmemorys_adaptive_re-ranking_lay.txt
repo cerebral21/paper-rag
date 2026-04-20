@@ -1,0 +1,96 @@
+Query: How does SuperLocalMemory's adaptive re-ranking layer improve NDCG@5 from 0.441 to 0.900?
+Retrieved 10 passages
+
+--- Passage 1 (score: 6.7607) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The adaptive learning layer (Section 3.3) addresses this directly. With rule-based re-ranking (20+
+feedback signals), NDCG@5 improves from 0.441 to 0.900 (+104%) and NDCG@10 from 0.466 to
+0.728 (+56%), while adding only 20ms latency overhead. MRR is maintained at 0.90—the adaptive
+layer does not deg...
+
+--- Passage 2 (score: 4.7241) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+across seven benchmark dimensions demonstrates 10.6ms median search latency,
+zero concurrency errors under 10 simultaneous agents, trust separation (gap =
+0.90) with 72% trust degradation for sleeper attacks, and 104% improvement
+in NDCG@5 when adaptive re-ranking is enabled. Behavioral data is isol...
+
+--- Passage 3 (score: 2.5896) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+degradation for sleeper attacks and zero false positives. The adaptive learning-to-rank framework
+addresses the layer differentiation limitation through three-layer behavioral analysis and re-ranking,
+achieving 104% NDCG@5 improvement while adding only 20ms latency overhead. Behavioral data
+is archi...
+
+--- Passage 4 (score: 2.3741) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+Table 3: Layer ablation study. 1,000 memories, 10 queries across 5 topics. Graded relevance based
+on importance scores. MRR = Mean Reciprocal Rank, NDCG = Normalized Discounted Cumulative
+Gain.
+
+Configuration
+MRR
+NDCG@5
+NDCG@10
+Latency (ms)
+
+FTS5 only
+0.90
+0.441
+0.466
+130.0
++ TF-IDF reranking
+0.90
+0...
+
+--- Passage 5 (score: 1.5737) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The core FTS5 retrieval achieves MRR 0.90 (first relevant result at rank 1 for 90% of queries). Layers
+3–4 maintain but do not improve MRR—the Graph and Pattern layers provide structural enrichment
+but do not modify the search ranking algorithm. However, NDCG reveals the critical difference:
+while M...
+
+--- Passage 6 (score: 1.5512) ---
+Source: data/documents\super_local_memory.pdf, Page: 4
+Figure 1: SuperLocalMemory architecture. The four-layer memory stack (left) provides progressive
+enhancement; the adaptive learning layer (v2.7) re-ranks search results using three-layer behav-
+ioral analysis. The coordination panel (right, v2.5) handles event broadcasting, trust scoring, and
+proven...
+
+--- Passage 7 (score: 1.1082) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+with 72% trust degradation.
+3. A zero-LLM adaptive learning-to-rank framework that mines user preferences across three
+behavioral layers with privacy-preserving behavioral learning and re-ranks retrieval results,
+achieving 104% NDCG@5 improvement over the base search pipeline—without requiring
+any L...
+
+--- Passage 8 (score: 0.9354) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+BM25-to-re-ranker pipelines for personal collections [26] and cold-start mitigation through synthetic
+bootstrapping [13] inform our three-phase adaptive ranking design. Time-weighted sequential pattern
+mining [16] inspires our sliding-window-based workflow pattern detection. To our knowledge,
+SuperL...
+
+--- Passage 9 (score: 0.0090) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+To validate against human judgment, a developer with 3 months of active SuperLocalMemory usage
+(182 organic memories across multiple projects) rated recall results on a 0–3 graded relevance
+scale across 20 queries spanning 5 project contexts, yielding 70 individual relevance judgments.
+Human-judged ...
+
+--- Passage 10 (score: -0.3902) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+5.8
+System Comparison
+
+Table 5 compares SuperLocalMemory with published memory systems. SuperLocalMemory re-
+mains the only system combining zero-dependency local-first architecture, Bayesian trust scoring,
+and adaptive local learning without LLM inference. Mem0 [4] now offers local deployment via
+O...
+
+============================================================
+ANSWER:
+SuperLocalMemory's adaptive re-ranking layer improves NDCG@5 from 0.441 to 0.900 through the implementation of a rule-based re-ranking system that utilizes over 20 feedback signals. This adaptive learning layer enhances the ranking of search results without degrading the topic-level accuracy, as indicated by the maintained Mean Reciprocal Rank (MRR) of 0.90. The improvement in NDCG@5 represents a 104% increase, while the latency overhead added by this layer is only 20 milliseconds [Passage 1][Passage 3]. 
+
+The documents do not provide specific details on the nature of the feedback signals or the exact mechanisms of the re-ranking process beyond stating that it involves behavioral analysis and re-ranking [Passage 6].

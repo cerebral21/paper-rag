@@ -1,0 +1,60 @@
+Query: How does the unified LTR framework incorporate user behavioral signals like clicks, add-to-carts, and purchases into its ranking model?
+Retrieved 6 passages
+
+--- Passage 1 (score: 6.8627) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+candidate sources. Instead of assigning fixed global weights to re-
+trieval channels, we treat channel information as a signal within a
+unified ranking framework that jointly optimizes multiple business
+objectives, including clicks, add-to-carts, and purchases. By incor-
+porating recent user behavio...
+
+--- Passage 2 (score: 6.5917) ---
+Source: data/documents\unified_LTR.pdf, Page: 1
+• We present a practical unified ranking framework that merges
+heterogeneous candidates from multiple retrieval channels
+using a single learning-to-rank model under strict latency
+constraints.
+• We propose a data representation and labeling strategy to
+jointly optimize clicks, add-to-carts, and purc...
+
+--- Passage 3 (score: 6.4018) ---
+Source: data/documents\unified_LTR.pdf, Page: 0
+a unified ranking model that learns to merge and rank documents
+from multiple retrieval channels. We formulate the problem as a
+channel-aware learning-to-rank task that jointly optimizes clicks,
+add-to-carts, and purchases while incorporating channel-specific
+objectives. We further incorporate recen...
+
+--- Passage 4 (score: 1.1615) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+Query–Item Engagement Features. Extending prior work on using
+clicks as both labels and features [18], we incorporate clicks, add-
+to-cart events, and purchases as engagement features. These are
+combined using a weighted formulation similar to Section 2.3, with
+distinct aggregation and temporal deca...
+
+--- Passage 5 (score: -0.0731) ---
+Source: data/documents\hybrib_LTR_context_embedding.pdf, Page: 2
+ In our proposed model, a novel bug solutions recommendation approach based on the
+
+incorporation of the content with the social interaction’s context on Stack Overflow into a unified 
+learning-to-rank schema is proposed.
+
+ The learning of our LTR ranking model is based on the extraction of four d...
+
+--- Passage 6 (score: -1.5851) ---
+Source: data/documents\unified_LTR.pdf, Page: 2
+Our experiments are conducted using large-scale user interaction
+logs collected from Target’s e-commerce search platform, in accor-
+dance with internal privacy, security, and data governance poli-
+cies. The dataset includes search queries, ranked item impressions,
+and corresponding user interactions...
+
+============================================================
+ANSWER:
+The unified LTR (Learning-to-Rank) framework incorporates user behavioral signals such as clicks, add-to-carts, and purchases by treating these signals as engagement features within a channel-aware ranking model. This model is designed to jointly optimize multiple business objectives, including clicks, add-to-carts, and purchases, while also considering channel-specific objectives. The framework dynamically captures short-term intent shifts by incorporating recent user behavioral signals, which are critical for improving conversion rates in multi-channel ranking scenarios [Passage 1], [Passage 2], [Passage 3].
+
+Additionally, the framework uses a weighted formulation to combine these engagement features, allowing for distinct aggregation and temporal decay to effectively capture short-term user interactions [Passage 4]. The experiments conducted for this framework utilized large-scale user interaction logs that included these behavioral signals, ensuring that the model is trained on relevant and recent data [Passage 6]. 
+
+Overall, the integration of these user behavioral signals is central to the framework's ability to optimize for conversion in a dynamic and responsive manner.

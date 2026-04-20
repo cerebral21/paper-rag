@@ -1,0 +1,29 @@
+# RAG Project Evaluation Questions
+# One question per line. Lines starting with # are ignored.
+# Empty lines are ignored.
+
+tell me about Leiden-based knowledge graph clustering. how does it differ from normal knowledge graphs?
+tell me about lambdamart. What is it and how does it work?
+For the source of data, some papers use stack overflow. What are the advantages of using such a platform rather than some documented sources?
+How is BM25 used in information retrieval and what are its limitations?
+What is the difference between pointwise, pairwise, and listwise approaches to learning to rank?
+How does the hybrid LTR system architecture handle feature extraction from Stack Overflow posts?
+What evaluation metrics are used to measure ranking quality in the papers?
+How do LLMs handle refusal, and what role do refusal tokens play?
+What is the role of context embeddings in improving answer ranking on Q&A platforms?
+How does the unified LTR framework incorporate user behavioral signals like clicks, add-to-carts, and purchases into its ranking model?
+How does SuperLocalMemory's four-layer architecture progressively enhance memory retrieval, and what does each layer contribute?
+What are the ethical concerns of using Stack Overflow data for training ML models?
+What is Matryoshka Representation Learning and how does F2LLM-v2 use it to support multiple embedding dimensions?
+How does SuperLocalMemory defend against sleeper agent attacks using Bayesian trust scoring?
+What is the difference between semantic chunking and fixed-size chunking for document retrieval?
+How does the BM25 query augmentation approach avoid running a language model over every document?
+What is NDCG and why is it a better metric than MRR for evaluating within-topic ranking quality?
+How does SuperLocalMemory's adaptive re-ranking layer improve NDCG@5 from 0.441 to 0.900?
+What is the cold-start problem in personalized ranking, and how can synthetic bootstrapping help?
+How does the unified LTR framework handle candidates from multiple heterogeneous retrieval channels?
+What are categorical steering vectors, and how are they constructed from residual-stream activations in the refusal control paper?
+How does the hybrid LTR context embedding architecture use GBDT for re-ranking, and why is it preferred over deep neural models in production?
+What is the FTS5 full-text search engine and what role does it play as the base retrieval layer in SuperLocalMemory?
+How does F2LLM-v2 handle multilingual embedding training across 282 languages, and what is the two-stage training pipeline?
+What are the key differences between SuperLocalMemory and cloud-based memory systems like Mem0 and Zep in terms of privacy and architecture?

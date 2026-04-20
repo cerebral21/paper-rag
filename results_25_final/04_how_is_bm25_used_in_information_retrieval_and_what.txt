@@ -1,0 +1,6 @@
+Query: How is BM25 used in information retrieval and what are its limitations?
+Retrieved 0 passages
+
+============================================================
+ANSWER:
+I don't have enough information in the provided documents to answer this question. No relevant passages were found.

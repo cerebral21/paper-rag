@@ -1,0 +1,67 @@
+Query: How does SuperLocalMemory's four-layer architecture progressively enhance memory retrieval, and what does each layer contribute?
+Retrieved 7 passages
+
+--- Passage 1 (score: 5.0537) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+3
+System Architecture
+
+SuperLocalMemory uses a four-layer progressive enhancement architecture (Figure 1) where each
+layer adds capability without replacing lower layers. If any layer fails, the system degrades gracefully
+to the next available layer. The core requires only Python standard library (s...
+
+--- Passage 2 (score: 4.6456) ---
+Source: data/documents\super_local_memory.pdf, Page: 4
+Figure 1: SuperLocalMemory architecture. The four-layer memory stack (left) provides progressive
+enhancement; the adaptive learning layer (v2.7) re-ranks search results using three-layer behav-
+ioral analysis. The coordination panel (right, v2.5) handles event broadcasting, trust scoring, and
+proven...
+
+--- Passage 3 (score: 1.0401) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+We present SuperLocalMemory, a local-first memory system for multi-agent AI
+that defends against OWASP ASI06 memory poisoning through architectural
+isolation and Bayesian trust scoring, while personalizing retrieval through adaptive
+learning-to-rank—all without cloud dependencies or LLM inference ca...
+
+--- Passage 4 (score: 0.9046) ---
+Source: data/documents\super_local_memory.pdf, Page: 8
+Standard benchmarks. LoCoMo [18] evaluates conversational agent memory through multi-
+turn dialogue QA. SuperLocalMemory is designed for developer workflow memory—architectural
+decisions, coding patterns, project context—a fundamentally different retrieval task. Developer-
+workflow-specific benchmar...
+
+--- Passage 5 (score: -0.6121) ---
+Source: data/documents\super_local_memory.pdf, Page: 1
+We present SuperLocalMemory, a local-first memory system that eliminates cloud dependency while
+providing trust-aware multi-agent coordination. Our contributions:...
+
+--- Passage 6 (score: -0.8546) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+3.2
+Event Coordination Layer
+
+Added in v2.5, the event coordination layer transforms SuperLocalMemory from passive storage to
+an active coordination hub.
+
+Event Bus.
+A SQLite-backed event log with 200-event in-memory buffer broadcasts events
+(memory.created, memory.recalled, agent.connected, graph.u...
+
+--- Passage 7 (score: -1.3548) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+5.8
+System Comparison
+
+Table 5 compares SuperLocalMemory with published memory systems. SuperLocalMemory re-
+mains the only system combining zero-dependency local-first architecture, Bayesian trust scoring,
+and adaptive local learning without LLM inference. Mem0 [4] now offers local deployment via
+O...
+
+============================================================
+ANSWER:
+SuperLocalMemory's four-layer architecture enhances memory retrieval progressively by adding capabilities at each layer without replacing the lower layers. This design allows the system to degrade gracefully to the next available layer if any layer fails, ensuring continued functionality. 
+
+While the provided passages mention the existence of the four-layer memory stack and its purpose of progressive enhancement, they do not detail the specific contributions of each layer. The passages primarily focus on the overall architecture and its benefits, such as the elimination of cloud dependencies and the use of Bayesian trust scoring for memory retrieval personalization [Passage 1][Passage 3].
+
+Therefore, based on the documents, I can confirm that the four-layer architecture enhances memory retrieval progressively, but they do not provide specific details about what each layer contributes.

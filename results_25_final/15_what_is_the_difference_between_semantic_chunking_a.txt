@@ -1,0 +1,6 @@
+Query: What is the difference between semantic chunking and fixed-size chunking for document retrieval?
+Retrieved 0 passages
+
+============================================================
+ANSWER:
+I don't have enough information in the provided documents to answer this question. No relevant passages were found.

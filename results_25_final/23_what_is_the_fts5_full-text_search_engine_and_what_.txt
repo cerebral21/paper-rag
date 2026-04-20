@@ -1,0 +1,27 @@
+Query: What is the FTS5 full-text search engine and what role does it play as the base retrieval layer in SuperLocalMemory?
+Retrieved 2 passages
+
+--- Passage 1 (score: 3.2153) ---
+Source: data/documents\super_local_memory.pdf, Page: 6
+The core FTS5 retrieval achieves MRR 0.90 (first relevant result at rank 1 for 90% of queries). Layers
+3–4 maintain but do not improve MRR—the Graph and Pattern layers provide structural enrichment
+but do not modify the search ranking algorithm. However, NDCG reveals the critical difference:
+while M...
+
+--- Passage 2 (score: 2.3006) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+3.1
+Four-Layer Memory Stack
+
+Layer 1: Storage Engine.
+The foundation is SQLite with FTS5 full-text search tokenization and
+optional TF-IDF vectorization [25] via scikit-learn. The DbConnectionManager implements WAL
+(Write-Ahead Logging) for concurrent read access, a thread-safe write queue serializi...
+
+============================================================
+ANSWER:
+The FTS5 full-text search engine is a component of the SuperLocalMemory system that utilizes tokenization and optional TF-IDF vectorization for efficient searching of text data. It serves as the foundation of the memory stack, specifically in Layer 1, which is the Storage Engine. The FTS5 engine enables the retrieval of memory records based on their content, tags, and importance scores, facilitating effective search operations within the system [Passage 2].
+
+In terms of its role as the base retrieval layer, the FTS5 engine achieves a Mean Reciprocal Rank (MRR) of 0.90, indicating that the first relevant result is found at rank 1 for 90% of queries. This suggests that it is highly effective in returning relevant results quickly. However, while the subsequent layers (3–4) provide structural enrichment, they do not enhance the MRR, as they do not alter the search ranking algorithm. Instead, they contribute to a different evaluation metric, NDCG, which assesses the relevance of results more granularly by distinguishing between high-relevance and low-relevance memories within the same topic [Passage 1].
+
+In summary, the FTS5 full-text search engine is crucial for the initial retrieval of relevant memory records in SuperLocalMemory, providing a strong foundation for the system's search capabilities.

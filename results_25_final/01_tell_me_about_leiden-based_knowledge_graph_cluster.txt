@@ -1,0 +1,38 @@
+Query: tell me about Leiden-based knowledge graph clustering. how does it differ from normal knowledge graphs?
+Retrieved 4 passages
+
+--- Passage 1 (score: 1.6981) ---
+Source: data/documents\super_local_memory.pdf, Page: 7
+Knowledge graphs for retrieval. GraphRAG [6] establishes hierarchical graph-based retrieval
+using Leiden community detection for multi-level summarization. Our Layer 3 adapts this for local
+operation with TF-IDF key-term extraction instead of LLM-based entity extraction. The Multi-Agent
+Blackboard p...
+
+--- Passage 2 (score: 1.5939) ---
+Source: data/documents\super_local_memory.pdf, Page: 5
+Knowledge graph construction confirms O(n2) scaling due to pairwise cosine similarity computation:
+0.28s for 100 memories, 10.6s for 1,000, and 277s for 5,000 (the system’s design limit). Edge count
+grows from 935 to 2.46M across this range. The Leiden algorithm consistently identifies 6–7 top-level...
+
+--- Passage 3 (score: 0.2090) ---
+Source: data/documents\super_local_memory.pdf, Page: 2
+Layer 3: Knowledge Graph.
+Key-term extraction uses TF-IDF vectorization to identify top terms
+per memory. Edges are constructed via pairwise cosine similarity (threshold > 0.3). Community
+detection uses the Leiden algorithm [28] with ModularityVertexPartition, producing hierarchical
+subclustering to...
+
+--- Passage 4 (score: 0.1048) ---
+Source: data/documents\super_local_memory.pdf, Page: 0
+users—a threat demonstrated in documented attacks against production systems.
+Our architecture combines SQLite-backed storage with FTS5 full-text search,
+Leiden-based knowledge graph clustering, an event-driven coordination layer
+with per-agent provenance, and an adaptive re-ranking framework that l...
+
+============================================================
+ANSWER:
+Leiden-based knowledge graph clustering is a method used in the context of knowledge graph construction that focuses on community detection within the graph. The Leiden algorithm is employed to identify top-level communities and create hierarchical subclustering, reaching a depth of 3. This approach allows for a more organized structure within the knowledge graph, as it groups related information together based on the detected communities [Passage 2][Passage 3].
+
+In contrast, normal knowledge graphs may not utilize such advanced community detection techniques. They typically represent relationships between entities without necessarily organizing them into hierarchical structures or communities. The use of the Leiden algorithm in Leiden-based clustering enhances the ability to summarize and retrieve information effectively by structuring the data in a way that reflects its inherent relationships [Passage 1].
+
+However, the provided documents do not elaborate on the specific differences between Leiden-based knowledge graphs and traditional knowledge graphs beyond the community detection aspect.
