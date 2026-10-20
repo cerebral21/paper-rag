@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 logging.getLogger().setLevel(logging.ERROR)
 
 from src.embeddings import load_vector_store
-from src.retreival import retrieve_hybrid
+from src.retrieval import retrieve_hybrid
 from src.generation import generate_answer
 
 
