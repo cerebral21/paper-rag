@@ -135,7 +135,7 @@ The prompt is designed around three behaviors:
 
 ### Corpus
 
-9 research papers (~200 pages) covering Learning to Rank, multilingual embeddings, LLM safety, multi-agent memory systems, and cross-model query optimization. The corpus deliberately includes topically adjacent but semantically different papers to test retrieval precision under vocabulary overlap.
+8 research papers (~200 pages) covering Learning to Rank, multilingual embeddings, LLM safety, multi-agent memory systems, and cross-model query optimization. The corpus deliberately includes topically adjacent but semantically different papers to test retrieval precision under vocabulary overlap.
 
 ### Evaluation Dataset
 
