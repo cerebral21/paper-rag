@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 
 from src.chunking import load_documents, chunk_fixed_size, filter_reference_chunks
 from src.embeddings import create_vector_store
-from src.retreival import save_chunks_for_bm25
+from src.retrieval import save_chunks_for_bm25
 
 def ingest():
     if os.path.exists("./.chroma"):
